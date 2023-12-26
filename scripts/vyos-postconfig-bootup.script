@@ -1,0 +1,20 @@
+#!/bin/sh
+# This script is executed at boot time after VyOS configuration is fully
+# applied. Any modifications required to work around unfixed bugs or use
+# services not available through the VyOS CLI system can be placed here.
+
+if [ -d "/home/vyos" ]; then
+  tee -a /home/vyos/.bash_aliases <<END >/dev/null
+export SOPS_AGE_KEY_FILE=/config/secrets/age.key
+export GIT_SSH_COMMAND="ssh -i /config/secrets/id_ed25519"
+export VISUAL=vim
+export EDITOR=vim
+END
+  chown vyos:users /home/vyos/.bash_aliases
+fi
+
+# Disable EEE on network interfaces as a workaround to i225/i226 issues
+while read -r interface
+do
+  sudo ethtool --set-eee "${interface}" eee off
+done < <(ls -l /sys/class/net/*/device/driver/module | cut -d/ -f5)
