@@ -1,0 +1,7 @@
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+!*.sh
+!*.sh.old

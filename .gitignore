@@ -1,0 +1,20 @@
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+!.editorconfig
+!/.sops.yaml
+!/apply-config.sh
+!/LICENSE
+!/secrets.sops.env
+!/settings.env
+
+# VyOS config
+!bootstrap/
+!scripts/
+!config-parts/
+!containers/
+
+# CI
+!.github/
