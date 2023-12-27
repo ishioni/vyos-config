@@ -4,8 +4,6 @@
 # services not available through the VyOS CLI system can be placed here.
 
 if [ -d "/home/vyos" ]; then
-
-if [ -d "/home/vyos" ]; then
 # Add dotfiles for home directory
   tee /home/vyos/.gitconfig <<END >/dev/null
 [init]
