@@ -14,9 +14,9 @@ set interfaces ethernet eth0 address dhcp
 # set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 
 # Unused
-set interfaces ethernet eth1 description '2.5GBe'
+set interfaces ethernet eth1 description '2.5GbE'
 set interfaces ethernet eth1 hw-id '00:f0:da:ef:0a:d5'
-set interfaces ethernet eth2 description '2.5GBe'
+set interfaces ethernet eth2 description '2.5GbE'
 set interfaces ethernet eth2 hw-id '00:f0:da:ef:0a:d4'
 set interfaces ethernet eth3 hw-id '00:f0:da:ef:0a:d7'
 set interfaces ethernet eth5 description 'SFP1'
