@@ -1,7 +1,7 @@
 #!/bin/vbash
 
 # WAN
-set interfaces ethernet eth0 descriptioniption 'POE - Fiber'
+set interfaces ethernet eth0 description 'POE - Fiber'
 set interfaces ethernet eth0 hw-id '00:f0:da:ef:0a:d8'
 set interfaces ethernet eth0 address dhcp
 
