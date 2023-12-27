@@ -53,4 +53,4 @@ set interfaces wireguard wg0 peer realmetab public-key 'koviCLSU20it5UVa2S4Q0Wn6
 set interfaces wireguard wg0 peer gierzwald allowed-ips '10.254.2.1/32'
 set interfaces wireguard wg0 peer gierzwald allowed-ips '10.2.1.0/24'
 set interfaces wireguard wg0 peer gierzwald persistent-keepalive '15'
-set interfaces wireguard wg0 peer gierzwald public-key 'koviCLSU20it5UVa2S4Q0Wn6aDxYGnJDRJl9hTN6hwk='
+set interfaces wireguard wg0 peer gierzwald public-key 'kr3xTbwvqWLnM6f061rrB+f/Es0ZKCDTwz/5qA9yYxk='
