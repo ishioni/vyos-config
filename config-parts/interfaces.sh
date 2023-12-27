@@ -21,7 +21,7 @@ set interfaces ethernet eth2 hw-id '00:f0:da:ef:0a:d4'
 set interfaces ethernet eth3 hw-id '00:f0:da:ef:0a:d7'
 set interfaces ethernet eth5 description 'SFP1'
 set interfaces ethernet eth5 hw-id '50:6b:4b:0c:1d:d9'
-set interfaces ethernet eth5 description 'SFP2'
+set interfaces ethernet eth6 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # LAN
