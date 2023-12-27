@@ -1,7 +1,7 @@
 #!/bin/vbash
 
-set system domain-name "${SECRET_DOMAIN_NAME}"
 set system host-name 'vyos'
+set system domain-name 'network.internal'
 
 set system ipv6 disable-forwarding
 
