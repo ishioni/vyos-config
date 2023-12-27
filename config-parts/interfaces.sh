@@ -3,12 +3,15 @@
 # WAN
 set interfaces ethernet eth0 descriptioniption 'POE - Fiber'
 set interfaces ethernet eth0 hw-id '00:f0:da:ef:0a:d8'
-set interfaces ethernet eth0 vif 35 descriptioniption 'Internet'
+set interfaces ethernet eth0 address dhcp
 
-set interfaces pppoe pppoe0 description 'WAN - Fiber'
-set interfaces pppoe pppoe0 source-interface 'eth0.35'
-set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
-set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
+# Not until switchover
+# set interfaces ethernet eth0 vif 35 descriptioniption 'Internet'
+
+# set interfaces pppoe pppoe0 description 'WAN - Fiber'
+# set interfaces pppoe pppoe0 source-interface 'eth0.35'
+# set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
+# set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 
 # Unused
 set interfaces ethernet eth1 description '2.5GBe'
@@ -22,9 +25,11 @@ set interfaces ethernet eth5 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # LAN
-set interfaces ethernet eth4 description 'MGMT'
+set interfaces ethernet eth4 description 'NETWORK'
 set interfaces ethernet eth4 hw-id '00:f0:da:ef:0a:d6'
-set interfaces ethernet eth4 address '10.1.1.1/24'
+set interfaces ethernet eth4 address '10.1.0.1/24'
+set interfaces ethernet eth4 vif 1 address '10.1.1.1/24'
+set interfaces ethernet eth4 vif 1 description 'SERVERS'
 set interfaces ethernet eth4 vif 2 address '10.1.2.1/24'
 set interfaces ethernet eth4 vif 2 description 'LAN'
 set interfaces ethernet eth4 vif 3 address '10.1.3.1/24'

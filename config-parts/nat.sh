@@ -7,7 +7,15 @@ set nat source rule 100 outbound-interface 'pppoe0'
 set nat source rule 100 translation address 'masquerade'
 
 # Force NTP
-set nat destination rule 200 description 'Force NTP for MGMT'
+set nat destination rule 200 description 'Force NTP for NETWORK'
+set nat destination rule 200 destination address '!10.1.0.1'
+set nat destination rule 200 destination port '123'
+set nat destination rule 200 inbound-interface 'eth4'
+set nat destination rule 200 protocol 'udp'
+set nat destination rule 200 translation address '10.1.0.1'
+set nat destination rule 200 translation port '123'
+
+set nat destination rule 200 description 'Force NTP for SERVERS'
 set nat destination rule 200 destination address '!10.1.1.1'
 set nat destination rule 200 destination port '123'
 set nat destination rule 200 inbound-interface 'eth4'
