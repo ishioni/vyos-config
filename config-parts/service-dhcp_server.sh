@@ -2,6 +2,14 @@
 
 set service dhcp-server hostfile-update
 
+set service dhcp-server global-parameters 'option space ubnt;'
+set service dhcp-server global-parameters 'option ubnt.unifi-address code 1 = ip-address;'
+set service dhcp-server global-parameters 'class &quot;ubnt&quot; {'
+set service dhcp-server global-parameters 'match if substring (option vendor-class-identifier, 0, 4) = &quot;ubnt&quot;;'
+set service dhcp-server global-parameters 'option vendor-class-identifier &quot;ubnt&quot;;'
+set service dhcp-server global-parameters 'vendor-option-space ubnt;'
+set service dhcp-server global-parameters '}'
+
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
 set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 default-router '10.1.0.1'
@@ -11,6 +19,7 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 lease '86
 set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 name-server '10.1.0.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 range 0 start '10.1.0.32'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 range 0 stop '10.1.0.63'
+set service dhcp-server shared-network-name NETWORK subnet 10.0.0.0/24 subnet-parameters 'option ubnt.unifi-address 10.5.0.2;'
 
 # NETWORK static mappings
 set service dhcp-server shared-network-name NETWORK subnet 10.1.0.0/24 static-mapping bigswitch ip-address '10.1.0.10'
