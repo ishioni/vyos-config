@@ -2,8 +2,5 @@
 /*
 
 # Track certain files and directories
-!cert
-!data
-!logs
 !.gitignore
 !.gitkeep
