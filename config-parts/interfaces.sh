@@ -25,33 +25,28 @@ set interfaces ethernet eth6 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # BRIDGE
-
-set interfaces bridge br0 description 'LAN'
-set interfaces bridge br0 enable-vlan
-set interfaces bridge br0 member interface eth3 native-vlan 1
-set interfaces bridge br0 member interface eth3 allowed-vlan 1-100
-set interfaces bridge br0 member interface eth5 native-vlan 1
-set interfaces bridge br0 member interface eth5 allowed-vlan 1-100
-set interfaces bridge br0 stp
-set interfaces bridge br0 forwarding-delay 5
-set interfaces bridge br0 igmp snooping
-set interfaces bridge br0 address 192.168.2.1/24
-set interfaces bridge br0 vif 2 description 'TEST'
-set interfaces bridge br0 vif 2 address '192.168.4.1/24'
-
+set interfaces bridge br0 description 'NETWORK'
+set interfaces bridge br0 address '10.1.1.1/24'
+set interfaces bridge br0 'enable-vlan'
+set interfaces bridge br0 member interface eth4 native-vlan '1'
+set interfaces bridge br0 member interface eth4 allowed-vlan '1-100'
+set interfaces bridge br0 member interface eth5 native-vlan '1'
+set interfaces bridge br0 member interface eth5 allowed-vlan '1-100'
+set interfaces bridge br0 member interface eth6 native-vlan '1'
+set interfaces bridge br0 member interface eth6 allowed-vlan '1-100'
+set interfaces bridge br0 'stp'
+set interfaces bridge br0 forwarding-delay '5'
+set interfaces bridge br0 igmp 'snooping'
 
 # LAN
-set interfaces ethernet eth4 description 'NETWORK'
-set interfaces ethernet eth4 hw-id '00:f0:da:ef:0a:d6'
-set interfaces ethernet eth4 address '10.1.1.1/24'
-set interfaces ethernet eth4 vif 2 address '10.1.2.1/24'
-set interfaces ethernet eth4 vif 2 description 'SERVERS'
-set interfaces ethernet eth4 vif 3 address '10.1.3.1/24'
-set interfaces ethernet eth4 vif 3 description 'IOT'
-set interfaces ethernet eth4 vif 4 address '10.1.4.1/24'
-set interfaces ethernet eth4 vif 4 description 'KUBERNETES'
-set interfaces ethernet eth4 vif 5 address '10.1.5.1/24'
-set interfaces ethernet eth4 vif 5 description 'TRUSTED'
+set interfaces ethernet br0 vif 2 address '10.1.2.1/24'
+set interfaces ethernet br0 vif 2 description 'SERVERS'
+set interfaces ethernet br0 vif 3 address '10.1.3.1/24'
+set interfaces ethernet br0 vif 3 description 'IOT'
+set interfaces ethernet br0 vif 4 address '10.1.4.1/24'
+set interfaces ethernet br0 vif 4 description 'KUBERNETES'
+set interfaces ethernet br0 vif 5 address '10.1.5.1/24'
+set interfaces ethernet br0 vif 5 description 'TRUSTED'
 
 set interfaces wireguard wg0 address '10.254.1.1/24'
 set interfaces wireguard wg0 description 'WIREGUARD'
