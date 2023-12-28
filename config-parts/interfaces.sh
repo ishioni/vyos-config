@@ -24,6 +24,16 @@ set interfaces ethernet eth5 hw-id '50:6b:4b:0c:1d:d9'
 set interfaces ethernet eth6 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
+# BRIDGE
+
+set interfaces bridge br0 description 'LAN'
+set interfaces bridge br0 member interface eth3 
+set interfaces bridge br0 member interface eth5
+set interfaces bridge br0 enable-vlan
+set interfaces bridge br0 stp
+set interfaces bridge br0 igmp snooping
+set interfaces bridge br0 address 192.168.2.1/24
+
 # LAN
 set interfaces ethernet eth4 description 'NETWORK'
 set interfaces ethernet eth4 hw-id '00:f0:da:ef:0a:d6'
@@ -35,7 +45,7 @@ set interfaces ethernet eth4 vif 3 description 'IOT'
 set interfaces ethernet eth4 vif 4 address '10.1.4.1/24'
 set interfaces ethernet eth4 vif 4 description 'KUBERNETES'
 set interfaces ethernet eth4 vif 5 address '10.1.5.1/24'
-set interfaces ethernet eth4 vif 5 description 'LAN'
+set interfaces ethernet eth4 vif 5 description 'TRUSTED'
 
 set interfaces wireguard wg0 address '10.254.1.1/24'
 set interfaces wireguard wg0 description 'WIREGUARD'

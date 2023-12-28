@@ -3,7 +3,7 @@
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
 set nat source rule 100 destination address '0.0.0.0/0'
-set nat source rule 100 outbound-interface name 'eth0'
+set nat source rule 100 outbound-interface name 'eth6'
 set nat source rule 100 translation address 'masquerade'
 
 # Force NTP
