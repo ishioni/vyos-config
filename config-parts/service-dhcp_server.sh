@@ -83,8 +83,8 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-na
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search 'trusted.internal'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 name-server '10.1.5.1'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 start '10.1.4.10'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 stop '10.1.4.128'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 start '10.1.5.10'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 stop '10.1.5.128'
 
 # LAN static mappings
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'
