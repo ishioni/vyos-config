@@ -12,7 +12,7 @@ set service dhcp-server global-parameters '}'
 
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.0.1'
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.1.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name 'network.internal'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search 'network.internal'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 lease '86400'
