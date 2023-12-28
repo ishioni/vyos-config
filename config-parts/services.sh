@@ -12,3 +12,7 @@ set service ntp server pl.pool.ntp.org
 # SSH server
 set service ssh disable-password-authentication
 set service ssh port '22'
+
+# mDNS server
+set service mdns repeater interface br0.3
+set service mdns repeater interface br0.5
