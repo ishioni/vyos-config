@@ -99,3 +99,13 @@ set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 lease '864
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 name-server '192.168.2.1'
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 range 0 start '192.168.2.2'
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 range 0 stop '192.168.2.10'
+
+# BRLAN - TEST
+set service dhcp-server shared-network-name LAN authoritative
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 default-router '192.168.4.1'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 domain-name 'brlan.internal'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 domain-search 'brlan.internal'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 lease '86400'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 name-server '192.168.4.1'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 range 0 start '192.168.4.2'
+set service dhcp-server shared-network-name LAN subnet 192.168.4.0/24 range 0 stop '192.168.4.10'

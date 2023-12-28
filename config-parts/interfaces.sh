@@ -33,8 +33,12 @@ set interfaces bridge br0 member interface eth3 allowed-vlan 1-100
 set interfaces bridge br0 member interface eth5 native-vlan 1
 set interfaces bridge br0 member interface eth5 allowed-vlan 1-100
 set interfaces bridge br0 stp
+set interfaces bridge br0 forwarding-delay 5
 set interfaces bridge br0 igmp snooping
 set interfaces bridge br0 address 192.168.2.1/24
+set interfaces bridge br0 vif 2 description 'TEST'
+set interfaces bridge br0 vif 2 address '192.168.4.1/24'
+
 
 # LAN
 set interfaces ethernet eth4 description 'NETWORK'
