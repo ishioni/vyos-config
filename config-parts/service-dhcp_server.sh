@@ -90,16 +90,6 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 s
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec mac-address '10:27:f5:09:42:81'
 
-# TRUSTED
-set service dhcp-server shared-network-name LAN authoritative
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 default-router '10.1.5.1'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 domain-name 'trusted.internal'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 domain-search 'trusted.internal'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 lease '86400'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 name-server '10.1.5.1'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 range 0 start '10.1.4.10'
-set service dhcp-server shared-network-name LAN subnet 10.1.5.0/24 range 0 stop '10.1.4.128'
-
 # BRLAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 default-router '192.168.2.1'
