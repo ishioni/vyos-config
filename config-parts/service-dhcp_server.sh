@@ -36,8 +36,8 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-ma
 # SERVERS
 set service dhcp-server shared-network-name SERVERS authoritative
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 default-router '10.1.2.1'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-name 'servers.${SECRET_DOMAIN}'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-search 'servers.${SECRET_DOMAIN}'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-name servers.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-search servers.${SECRET_DOMAIN}
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 lease '86400'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 name-server '10.1.2.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 start '10.1.2.128'
