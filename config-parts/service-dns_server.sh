@@ -1,5 +1,7 @@
 #!/bin/vbash
 
+set service dns forwarding name-server '192.168.1.1' port 53
+
 # NETWORK
 set service dns forwarding allow-from '10.1.1.0/24'
 set service dns forwarding listen-address '10.1.1.1'
