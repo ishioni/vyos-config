@@ -13,8 +13,8 @@ set service dns forwarding allow-from '10.1.3.0/24'
 set service dns forwarding listen-address '10.1.3.1'
 
 # KUBERNETES
-# set service dns forwarding allow-from '10.1.4.0/24'
-# set service dns forwarding listen-address '10.1.4.1'
+set service dns forwarding allow-from '10.1.4.0/24'
+set service dns forwarding listen-address '10.1.4.1'
 
 # TRUSTED
 set service dns forwarding allow-from '10.1.5.0/24'
