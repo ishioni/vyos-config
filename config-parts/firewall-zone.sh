@@ -3,7 +3,7 @@
 set firewall zone local local-zone
 set firewall zone local description 'Local router zone'
 set firewall zone local default-action 'drop'
-set firewall zone local from network containers name 'containers-local'
+set firewall zone local from containers name 'containers-local'
 set firewall zone local from network firewall name 'network-local'
 set firewall zone local from servers firewall name 'servers-local'
 set firewall zone local from iot firewall name 'iot-local'
