@@ -2,11 +2,6 @@
 
 set system host-name 'vyos'
 set system domain-name 'network.internal'
-set system static-host-mapping host-name rootnode.network.internal inet '10.1.1.1'
-set system static-host-mapping host-name rootnode.servers.internal inet '10.1.2.1'
-set system static-host-mapping host-name rootnode.iot.internal inet '10.1.3.1'
-set system static-host-mapping host-name rootnode.kubernetes.internal inet '10.1.4.1'
-set system static-host-mapping host-name rootnode.trusted.internal inet '10.1.5.1'
 
 set system ipv6 disable-forwarding
 
