@@ -13,8 +13,8 @@ set service dhcp-server global-parameters '}'
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.1.1'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name 'network.internal'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search 'network.internal'
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name network.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search network.${SECRET_DOMAIN}
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 lease '86400'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 name-server '10.1.1.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 start '10.1.1.128'
@@ -45,11 +45,14 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 s
 
 # SERVERS static mappings
 
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell ip-address '10.1.2.4'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell mac-address 'be:32:83:a0:de:8b'
+
 # IOT
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 default-router '10.1.3.1'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name 'iot.internal'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-search 'iot.internal'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name iot.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-search iot.${SECRET_DOMAIN}
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.1.3.1'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.128'
@@ -57,11 +60,24 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop 
 
 # IOT static mappings
 
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping homeassistant ip-address '10.1.3.2'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping homeassistant ip-address '10.1.3.3'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping homeassistant mac-address '72:26:5b:e5:f9:d9'
-# ...
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping rxv679 ip-address '10.1.3.4'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping rxv679 mac-address '8c:8b:83:c8:95:19'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping brother ip-address '10.1.3.5'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping brother mac-address '90:0f:0c:d8:a1:e7'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc ip-address '10.1.3.6'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc mac-address '78:11:dc:82:bd:1f'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping lgoled ip-address '10.1.3.7'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping lgoled mac-address '74:40:be:fa:a8:40'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping babycam ip-address '10.1.3.8'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping babycam mac-address '8c:85:80:d9:dd:26'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bedroomcam ip-address '10.1.3.9'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping bedroomcam mac-address '04:17:b6:1c:3c:a3'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping espzigbee ip-address '10.1.3.10'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping espzigbee mac-address '34:94:54:23:cc:83'
 
-# IOT
+# KUBERNETES
 # set service dhcp-server shared-network-name KUBERNETES authoritative
 # set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 default-router '10.1.4.1'
 # set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-name 'kubernetes.internal'
@@ -74,13 +90,24 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 # KUBERNETES static mappings
 # set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 ip-address '10.1.4.10'
 # set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 mac-address '06:7c:87:5d:25:90'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 ip-address '10.1.4.11'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 mac-address '26:e4:d6:c6:ed:5d'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 ip-address '10.1.4.12'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 mac-address '4e:15:3e:e4:7b:f3'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 ip-address '10.1.4.20'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 mac-address '56:16:fd:96:ea:94'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 ip-address '10.1.4.21'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 mac-address 'ba:7b:01:68:5a:0e'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 ip-address '10.1.4.22'
+# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 mac-address '06:ca:3f:73:46:6e'
+
 # ...
 
 # TRUSTED
 set service dhcp-server shared-network-name TRUSTED authoritative
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 default-router '10.1.5.1'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-name 'trusted.internal'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search 'trusted.internal'
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-name trusted.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search trusted.${SECRET_DOMAIN}
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 name-server '10.1.5.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 start '10.1.5.10'
@@ -93,8 +120,8 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-ma
 # BRLAN
 set service dhcp-server shared-network-name LAN authoritative
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 default-router '192.168.2.1'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-name 'lan.internal'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-search 'lan.internal'
+set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-name lan.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-search lan.${SECRET_DOMAIN}
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 lease '86400'
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 name-server '192.168.2.1'
 set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 range 0 start '192.168.2.2'
