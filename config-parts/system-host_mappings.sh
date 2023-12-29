@@ -13,4 +13,4 @@ set system static-host-mapping host-name quadrant.kubernetes.internal inet '10.1
 set system static-host-mapping host-name quadrant.trusted.internal inet '10.1.5.2'
 
 # KUBERNETES
-set system static-host-mapping host-name talos.kubernetes.internal '10.1.4.19'
+set system static-host-mapping host-name talos.kubernetes.internal inet '10.1.4.19'
