@@ -20,9 +20,6 @@ set firewall ipv4 name iot-wan description 'From IOT to WAN'
 # KUBERNETES -> WAN
 set firewall ipv4 name kubernetes-wan default-action 'accept'
 set firewall ipv4 name kubernetes-wan description 'From IOT to WAN'
-# KUBERNETES -> WAN
-set firewall ipv4 name kubernetes-wan default-action 'accept'
-set firewall ipv4 name kubernetes-wan description 'From KUBERNETES to WAN'
 # TRUSTED -> WAN
 set firewall ipv4 name trusted-wan default-action 'accept'
 set firewall ipv4 name trusted-wan description 'From TRUSTED to WAN'
