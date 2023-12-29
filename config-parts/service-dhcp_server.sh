@@ -116,23 +116,3 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 s
 # LAN static mappings
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec mac-address '10:27:f5:09:42:81'
-
-# BRLAN
-set service dhcp-server shared-network-name LAN authoritative
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 default-router '192.168.2.1'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-name lan.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 domain-search lan.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 lease '86400'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 name-server '192.168.2.1'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 range 0 start '192.168.2.2'
-set service dhcp-server shared-network-name LAN subnet 192.168.2.0/24 range 0 stop '192.168.2.10'
-
-# BRLAN - TEST
-set service dhcp-server shared-network-name TEST authoritative
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 default-router '192.168.4.1'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 domain-name 'brlan.internal'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 domain-search 'brlan.internal'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 lease '86400'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 name-server '192.168.4.1'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 range 0 start '192.168.4.2'
-set service dhcp-server shared-network-name TEST subnet 192.168.4.0/24 range 0 stop '192.168.4.10'
