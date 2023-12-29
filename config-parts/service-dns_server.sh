@@ -35,6 +35,6 @@ set service dns forwarding authoritative-domain proxmox-4.servers."${SECRET_DOMA
 set service dns forwarding authoritative-domain '6.2.1.10.in-addr.arpa' records ptr @ target proxmox-4.servers."${SECRET_DOMAIN}"
 set service dns forwarding authoritative-domain unifi.servers."${SECRET_DOMAIN}" records a @ address '10.5.0.2'
 set service dns forwarding authoritative-domain '2.0.5.10.in-addr.arpa' records ptr @ target unifi.servers."${SECRET_DOMAIN}"
-set service dns forwarding domain gierzwald.internal name-server '10.2.1.1'
-set service dns forwarding domain internal.movishell.pl name-server '192.168.3.1'
-set service dns forwarding domain services.movishell.pl name-server '10.1.4.128'
+# set service dns forwarding domain gierzwald.internal name-server '10.2.1.1'
+# set service dns forwarding domain internal.movishell.pl name-server '192.168.3.1'
+# set service dns forwarding domain services.movishell.pl name-server '10.1.4.128'
