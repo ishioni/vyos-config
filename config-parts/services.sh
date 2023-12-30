@@ -16,3 +16,6 @@ set service ssh port '22'
 # mDNS server
 set service mdns repeater interface br0.3
 set service mdns repeater interface br0.5
+
+# LLDP
+set service lldp interface all
