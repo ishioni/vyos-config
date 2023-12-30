@@ -67,9 +67,9 @@ set firewall ipv4 name trusted-containers description 'From TRUSTED to Container
 set firewall ipv4 name trusted-containers default-action 'accept'
 
 # WAN -> Containers
-set firewall ipv4 name iot-containers description 'From WAN to Containers'
-set firewall ipv4 name iot-containers default-action 'drop'
-set firewall ipv4 name iot-containers enable-default-log
+set firewall ipv4 name wan-containers description 'From WAN to Containers'
+set firewall ipv4 name wan-containers default-action 'drop'
+set firewall ipv4 name wan-containers enable-default-log
 
 ### Zone NETWORK ###
 
