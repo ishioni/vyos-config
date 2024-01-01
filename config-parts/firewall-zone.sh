@@ -11,7 +11,7 @@ set firewall zone local from iot firewall name 'iot-local'
 set firewall zone local from trusted firewall name 'trusted-local'
 set firewall zone local from wan firewall name 'wan-local'
 
-set firewall zone containers interface 'pod-containers'
+set firewall zone containers interface 'pod-services'
 set firewall zone containers description 'Containers'
 set firewall zone containers default-action 'drop'
 set firewall zone containers from local firewall name 'local-containers'
