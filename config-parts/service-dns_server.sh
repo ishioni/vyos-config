@@ -57,7 +57,7 @@ set service dns forwarding authoritative-domain '1.5.1.10.in-addr.arpa' records 
 set service dns forwarding authoritative-domain quadrant.trusted."${SECRET_DOMAIN}" records a @ address '10.1.5.2'
 set service dns forwarding authoritative-domain '2.5.1.10.in-addr.arpa' records ptr @ target quadrant.trusted."${SECRET_DOMAIN}"
 
-FORWARDING
+# FORWARDING
 set service dns forwarding domain gierzwald.internal name-server '10.2.1.1'
 set service dns forwarding domain internal.movishell.pl name-server '192.168.3.1'
 set service dns forwarding domain services.movishell.pl name-server '10.1.4.128'
