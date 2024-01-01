@@ -2,8 +2,7 @@
 /*
 
 # Track certain files and directories
+!conf
+!work
 !.gitignore
-
-!/adguard/
-!/bind/
-!/unifi/
+!.gitkeep
