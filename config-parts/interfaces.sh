@@ -49,7 +49,7 @@ set interfaces bridge br0 vif 3 description 'IOT'
 set interfaces bridge br0 vif 5 address '10.1.5.1/24'
 set interfaces bridge br0 vif 5 description 'TRUSTED'
 
-set interfaces wireguard wg0 address '10.254.254.1.1/24'
+set interfaces wireguard wg0 address '10.254.254.1/24'
 set interfaces wireguard wg0 description 'WIREGUARD'
 set interfaces wireguard wg0 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
 set interfaces wireguard wg0 port '51820'
