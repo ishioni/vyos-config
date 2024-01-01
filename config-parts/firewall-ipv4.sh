@@ -18,9 +18,9 @@ set firewall ipv4 name servers-local default-action 'accept'
 set firewall ipv4 name iot-local description 'From IOT to LOCAL'
 set firewall ipv4 name iot-local default-action 'accept'
 
-# # KUBERNETES -> LOCAL
-# set firewall ipv4 name kubernetes-local description 'From KUBERNETES to LOCAL'
-# set firewall ipv4 name kubernetes-local default-action 'accept'
+# KUBERNETES -> LOCAL
+set firewall ipv4 name kubernetes-local description 'From KUBERNETES to LOCAL'
+set firewall ipv4 name kubernetes-local default-action 'accept'
 
 # TRUSTED -> LOCAL
 set firewall ipv4 name trusted-local description 'From TRUSTED to LOCAL'
@@ -58,9 +58,9 @@ set firewall ipv4 name servers-containers default-action 'accept'
 set firewall ipv4 name iot-containers description 'From IOT to Containers'
 set firewall ipv4 name iot-containers default-action 'accept'
 
-# # KUBERNETES -> Containers
-# set firewall ipv4 name kubernetes-containers description 'From KUBERNETES to Containers'
-# set firewall ipv4 name kubernetes-containers default-action 'accept'
+# KUBERNETES -> Containers
+set firewall ipv4 name kubernetes-containers description 'From KUBERNETES to Containers'
+set firewall ipv4 name kubernetes-containers default-action 'accept'
 
 # TRUSTED -> Containers
 set firewall ipv4 name trusted-containers description 'From TRUSTED to Containers'
@@ -89,9 +89,9 @@ set firewall ipv4 name servers-network default-action 'accept'
 set firewall ipv4 name iot-network description 'From IOT to NETWORK'
 set firewall ipv4 name iot-network default-action 'accept'
 
-# # KUBERNETES -> NETWORK
-# set firewall ipv4 name kubernetes-network description 'From KUBERNETES to NETWORK'
-# set firewall ipv4 name kubernetes-network default-action 'accept'
+# KUBERNETES -> NETWORK
+set firewall ipv4 name kubernetes-network description 'From KUBERNETES to NETWORK'
+set firewall ipv4 name kubernetes-network default-action 'accept'
 
 # TRUSTED -> NETWORK
 set firewall ipv4 name trusted-network description 'From TRUSTED to NETWORK'
@@ -120,9 +120,9 @@ set firewall ipv4 name network-servers default-action 'accept'
 set firewall ipv4 name iot-servers description 'From IOT to SERVERS'
 set firewall ipv4 name iot-servers default-action 'accept'
 
-# # KUBERNETES -> SERVERS
-# set firewall ipv4 name kubernetes-servers description 'From KUBERNETES to SERVERS'
-# set firewall ipv4 name kubernetes-servers default-action 'accept'
+# KUBERNETES -> SERVERS
+set firewall ipv4 name kubernetes-servers description 'From KUBERNETES to SERVERS'
+set firewall ipv4 name kubernetes-servers default-action 'accept'
 
 # TRUSTED -> SERVERS
 set firewall ipv4 name trusted-servers description 'From TRUSTED to SERVERS'
@@ -151,9 +151,9 @@ set firewall ipv4 name network-iot default-action 'accept'
 set firewall ipv4 name servers-iot description 'From IOT to IOT'
 set firewall ipv4 name servers-iot default-action 'accept'
 
-# # KUBERNETES -> IOT
-# set firewall ipv4 name kubernetes-iot description 'From KUBERNETES to IOT'
-# set firewall ipv4 name kubernetes-iot default-action 'accept'
+# KUBERNETES -> IOT
+set firewall ipv4 name kubernetes-iot description 'From KUBERNETES to IOT'
+set firewall ipv4 name kubernetes-iot default-action 'accept'
 
 # TRUSTED -> IOT
 set firewall ipv4 name trusted-iot description 'From TRUSTED to IOT'
@@ -166,34 +166,34 @@ set firewall ipv4 name wan-iot enable-default-log
 
 # ### Zone KUBERNETES ###
 
-# # LOCAL -> KUBERNETES
-# set firewall ipv4 name local-kubernetes description 'From LOCAL to KUBERNETES'
-# set firewall ipv4 name local-kubernetes default-action 'accept'
+# LOCAL -> KUBERNETES
+set firewall ipv4 name local-kubernetes description 'From LOCAL to KUBERNETES'
+set firewall ipv4 name local-kubernetes default-action 'accept'
 
-# # Containers -> KUBERNETES
-# set firewall ipv4 name containers-kubernetes description 'From Container to KUBERNETES'
-# set firewall ipv4 name containers-kubernetes default-action 'accept'
+# Containers -> KUBERNETES
+set firewall ipv4 name containers-kubernetes description 'From Container to KUBERNETES'
+set firewall ipv4 name containers-kubernetes default-action 'accept'
 
-# # NETWORK -> KUBERNETES
-# set firewall ipv4 name network-kubernetes description 'From NETWORK to KUBERNETES'
-# set firewall ipv4 name network-kubernetes default-action 'accept'
+# NETWORK -> KUBERNETES
+set firewall ipv4 name network-kubernetes description 'From NETWORK to KUBERNETES'
+set firewall ipv4 name network-kubernetes default-action 'accept'
 
-# # SERVERS -> KUBERNETES
-# set firewall ipv4 name servers-kubernetes description 'From KUBERNETES to KUBERNETES'
-# set firewall ipv4 name servers-kubernetes default-action 'accept'
+# SERVERS -> KUBERNETES
+set firewall ipv4 name servers-kubernetes description 'From KUBERNETES to KUBERNETES'
+set firewall ipv4 name servers-kubernetes default-action 'accept'
 
-# # IOT -> KUBERNETES
-# set firewall ipv4 name iot-kubernetes description 'From IOT to KUBERNETES'
-# set firewall ipv4 name iot-kubernetes default-action 'accept'
+# IOT -> KUBERNETES
+set firewall ipv4 name iot-kubernetes description 'From IOT to KUBERNETES'
+set firewall ipv4 name iot-kubernetes default-action 'accept'
 
-# # TRUSTED -> KUBERNETES
-# set firewall ipv4 name trusted-kubernetes description 'From TRUSTED to KUBERNETES'
-# set firewall ipv4 name trusted-kubernetes default-action 'accept'
+# TRUSTED -> KUBERNETES
+set firewall ipv4 name trusted-kubernetes description 'From TRUSTED to KUBERNETES'
+set firewall ipv4 name trusted-kubernetes default-action 'accept'
 
-# # WAN -> KUBERNETES
-# set firewall ipv4 name wan-kubernetes description 'From WAN to KUBERNETES'
-# set firewall ipv4 name wan-kubernetes default-action 'drop'
-# set firewall ipv4 name wan-kubernetes enable-default-log
+# WAN -> KUBERNETES
+set firewall ipv4 name wan-kubernetes description 'From WAN to KUBERNETES'
+set firewall ipv4 name wan-kubernetes default-action 'drop'
+set firewall ipv4 name wan-kubernetes enable-default-log
 
 ### Zone TRUSTED ###
 
@@ -217,9 +217,9 @@ set firewall ipv4 name servers-trusted default-action 'accept'
 set firewall ipv4 name iot-trusted description 'From IOT to TRUSTED'
 set firewall ipv4 name iot-trusted default-action 'accept'
 
-# # KUBERNETES -> TRUSTED
-# set firewall ipv4 name kubernetes-trusted description 'From KUBERNETES to TRUSTED'
-# set firewall ipv4 name kubernetes-trusted default-action 'accept'
+# KUBERNETES -> TRUSTED
+set firewall ipv4 name kubernetes-trusted description 'From KUBERNETES to TRUSTED'
+set firewall ipv4 name kubernetes-trusted default-action 'accept'
 
 # WAN -> TRUSTED
 set firewall ipv4 name wan-trusted description 'From WAN to TRUSTED'
@@ -248,9 +248,9 @@ set firewall ipv4 name servers-wan default-action 'accept'
 set firewall ipv4 name iot-wan description 'From IOT to WAN'
 set firewall ipv4 name iot-wan default-action 'accept'
 
-# # KUBERNETES -> WAN
-# set firewall ipv4 name kubernetes-wan description 'From KUBERNETES to WAN'
-# set firewall ipv4 name kubernetes-wan default-action 'accept'
+# KUBERNETES -> WAN
+set firewall ipv4 name kubernetes-wan description 'From KUBERNETES to WAN'
+set firewall ipv4 name kubernetes-wan default-action 'accept'
 
 # TRUSTED -> WAN
 set firewall ipv4 name trusted-wan description 'From TRUSTED to WAN'
