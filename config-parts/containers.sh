@@ -5,6 +5,20 @@
 set container network services description 'Network for VyOS containers'
 set container network services prefix '10.5.0.0/24'
 
+# adguard
+set container name adguard image 'docker.io/adguard/adguardhome'
+set container name adguard memory '0'
+set container name adguard network services address '10.5.0.1'
+set container name adguard restart 'on-failure'
+set container name adguard shared-memory '0'
+set container name adguard environment LISTEN_ADDR value '10.5.0.1'
+set container name adguard volume work source '/config/containers/adguard/work'
+set container name adguard volume work destination '/opt/adguardhome/work'
+set container name adguard volume work mode 'rw'
+set container name adguard volume conf source '/config/containers/adguard/conf'
+set container name adguard volume conf destination '/opt/adguardhome/conf'
+set container name adguard volume conf mode 'rw'
+
 # unifi
 set container name unifi environment TZ value 'Europe/Warsaw'
 set container name unifi environment BIND_PRIV value 'true'
