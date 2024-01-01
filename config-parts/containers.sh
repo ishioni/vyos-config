@@ -6,7 +6,7 @@ set container network services description 'Network for VyOS containers'
 set container network services prefix '10.5.0.0/24'
 
 # adguard
-set container name adguard image 'docker.io/adguard/adguardhome'
+set container name adguard image 'docker.io/adguard/adguardhome:v0.107.43'
 set container name adguard memory '0'
 set container name adguard network services address '10.5.0.1'
 set container name adguard restart 'on-failure'
