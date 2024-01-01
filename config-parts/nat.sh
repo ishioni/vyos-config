@@ -32,13 +32,13 @@ set nat destination rule 103 protocol 'tcp'
 set nat destination rule 103 translation address '192.168.3.10'
 set nat destination rule 103 translation port '25565'
 
-# # JUMPHOST
-# set nat destination rule 100 description 'Jumphost'
-# set nat destination rule 100 destination port '22'
-# set nat destination rule 100 inbound-interface 'eth0'
-# set nat destination rule 100 protocol 'tcp'
-# set nat destination rule 100 translation address '10.1.2.66'
-# set nat destination rule 100 translation port '22'
+# JUMPHOST
+set nat destination rule 100 description 'Jumphost'
+set nat destination rule 100 destination port '22'
+set nat destination rule 100 inbound-interface 'eth0'
+set nat destination rule 100 protocol 'tcp'
+set nat destination rule 100 translation address '10.1.2.4'
+set nat destination rule 100 translation port '22'
 
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
