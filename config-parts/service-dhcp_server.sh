@@ -77,29 +77,29 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping espzigbee ip-address '10.1.3.10'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping espzigbee mac-address '34:94:54:23:cc:83'
 
-# KUBERNETES
-# set service dhcp-server shared-network-name KUBERNETES authoritative
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 default-router '10.1.4.1'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-name 'kubernetes.internal'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-search 'kubernetes.internal'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 lease '86400'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 name-server '10.1.4.1'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 start '10.1.4.128'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 stop '10.1.4.250'
+KUBERNETES
+set service dhcp-server shared-network-name KUBERNETES authoritative
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 default-router '10.1.4.1'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-name 'kubernetes.internal'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-search 'kubernetes.internal'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 lease '86400'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 name-server '10.1.4.1'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 start '10.1.4.128'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 stop '10.1.4.250'
 
-# KUBERNETES static mappings
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 ip-address '10.1.4.10'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 mac-address '06:7c:87:5d:25:90'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 ip-address '10.1.4.11'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 mac-address '26:e4:d6:c6:ed:5d'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 ip-address '10.1.4.12'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 mac-address '4e:15:3e:e4:7b:f3'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 ip-address '10.1.4.20'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 mac-address '56:16:fd:96:ea:94'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 ip-address '10.1.4.21'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 mac-address 'ba:7b:01:68:5a:0e'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 ip-address '10.1.4.22'
-# set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 mac-address '06:ca:3f:73:46:6e'
+KUBERNETES static mappings
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 ip-address '10.1.4.10'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 mac-address '06:7c:87:5d:25:90'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 ip-address '10.1.4.11'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-1 mac-address '26:e4:d6:c6:ed:5d'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 ip-address '10.1.4.12'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-2 mac-address '4e:15:3e:e4:7b:f3'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 ip-address '10.1.4.20'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-0 mac-address '56:16:fd:96:ea:94'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 ip-address '10.1.4.21'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-1 mac-address 'ba:7b:01:68:5a:0e'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 ip-address '10.1.4.22'
+set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping worker-2 mac-address '06:ca:3f:73:46:6e'
 
 # ...
 
