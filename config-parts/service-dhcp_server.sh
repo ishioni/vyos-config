@@ -1,6 +1,7 @@
 #!/bin/vbash
 
 set service dhcp-server hostfile-update
+set service dhcp-server host-decl-name 
 
 set service dhcp-server global-parameters 'option space ubnt;'
 set service dhcp-server global-parameters 'option ubnt.unifi-address code 1 = ip-address;'
