@@ -18,7 +18,7 @@ set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 # set interfaces ethernet eth0 address dhcp
 
 # Not until switchover
-set interfaces ethernet eth0 vif 35 descriptioniption 'Internet'
+set interfaces ethernet eth0 vif 35 description 'Internet'
 
 set interfaces pppoe pppoe0 description 'WAN - Fiber'
 set interfaces pppoe pppoe0 source-interface 'eth0.35'
