@@ -8,7 +8,7 @@ set container network services prefix '10.5.0.0/24'
 # adguard
 set container name adguard image 'docker.io/adguard/adguardhome:v0.107.43'
 set container name adguard memory '0'
-set container name adguard network services address '10.5.0.2'
+set container name adguard network services address '10.5.0.3'
 set container name adguard restart 'on-failure'
 set container name adguard shared-memory '0'
 set container name adguard environment LISTEN_ADDR value '10.5.0.3'
