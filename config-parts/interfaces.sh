@@ -49,10 +49,12 @@ set interfaces bridge br0 vif 3 description 'IOT'
 set interfaces bridge br0 vif 5 address '10.1.5.1/24'
 set interfaces bridge br0 vif 5 description 'TRUSTED'
 
-set interfaces wireguard wg0 address '10.254.1.1/24'
+set interfaces wireguard wg0 address '10.254.254.1.1/24'
 set interfaces wireguard wg0 description 'WIREGUARD'
 set interfaces wireguard wg0 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
 set interfaces wireguard wg0 port '51820'
+set interfaces wireguard wg0 mtu '1420'
+set interfaces wireguard wg0 ip adjust-mss '1380'
 set interfaces wireguard wg0 peer macbook allowed-ips '10.254.1.2/32'
 set interfaces wireguard wg0 peer macbook persistent-keepalive '15'
 set interfaces wireguard wg0 peer macbook public-key '+KktRAsWwGruA/0LfOv7z2oG2sd1vkcp1aZrPdS4F1Q='

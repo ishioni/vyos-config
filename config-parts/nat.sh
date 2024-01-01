@@ -1,5 +1,45 @@
 #!/bin/vbash
 
+# HTTP
+set nat destination rule 100 description 'Public ingress - http'
+set nat destination rule 100 destination port '80'
+set nat destination rule 100 inbound-interface 'eth0'
+set nat destination rule 100 protocol 'tcp'
+set nat destination rule 100 translation address '192.168.3.2'
+set nat destination rule 100 translation port '80'
+
+# HTTPS
+set nat destination rule 100 description 'Public ingress - https'
+set nat destination rule 100 destination port '443'
+set nat destination rule 100 inbound-interface 'eth0'
+set nat destination rule 100 protocol 'tcp'
+set nat destination rule 100 translation address '192.168.3.2'
+set nat destination rule 100 translation port '443'
+
+# TORRENT
+set nat destination rule 100 description 'uTP'
+set nat destination rule 100 destination port '51413'
+set nat destination rule 100 inbound-interface 'eth0'
+set nat destination rule 100 protocol 'tcp'
+set nat destination rule 100 translation address '192.168.3.4'
+set nat destination rule 100 translation port '51413'
+
+# MINECRAFT
+set nat destination rule 100 description 'Minecraft'
+set nat destination rule 100 destination port '25565'
+set nat destination rule 100 inbound-interface 'eth0'
+set nat destination rule 100 protocol 'tcp'
+set nat destination rule 100 translation address '192.168.3.10'
+set nat destination rule 100 translation port '25565'
+
+# # JUMPHOST
+# set nat destination rule 100 description 'Jumphost'
+# set nat destination rule 100 destination port '22'
+# set nat destination rule 100 inbound-interface 'eth0'
+# set nat destination rule 100 protocol 'tcp'
+# set nat destination rule 100 translation address '10.1.2.66'
+# set nat destination rule 100 translation port '22'
+
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
 set nat source rule 100 destination address '0.0.0.0/0'
