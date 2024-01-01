@@ -51,6 +51,7 @@ set service dns forwarding authoritative-domain '19.4.1.10.in-addr.arpa' records
 # TRUSTED
 set service dns forwarding allow-from '10.1.5.0/24'
 set service dns forwarding listen-address '10.1.5.1'
+set service dns forwarding name-server '10.5.0.3' port '53'
 # set service dns forwarding listen-address '10.254.254.1' #Broken, fix it later
 set service dns forwarding authoritative-domain rootnode.trusted."${SECRET_DOMAIN}" records a @ address '10.1.5.1'
 set service dns forwarding authoritative-domain '1.5.1.10.in-addr.arpa' records ptr @ target rootnode.trusted."${SECRET_DOMAIN}"
