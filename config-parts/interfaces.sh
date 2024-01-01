@@ -15,15 +15,15 @@ set interfaces ethernet eth6 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # WAN
-set interfaces ethernet eth0 address dhcp
+# set interfaces ethernet eth0 address dhcp
 
 # Not until switchover
-# set interfaces ethernet eth0 vif 35 descriptioniption 'Internet'
+set interfaces ethernet eth0 vif 35 descriptioniption 'Internet'
 
-# set interfaces pppoe pppoe0 description 'WAN - Fiber'
-# set interfaces pppoe pppoe0 source-interface 'eth0.35'
-# set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
-# set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
+set interfaces pppoe pppoe0 description 'WAN - Fiber'
+set interfaces pppoe pppoe0 source-interface 'eth0.35'
+set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
+set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
