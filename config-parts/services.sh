@@ -20,12 +20,13 @@ set service mdns repeater interface br0.5
 # LLDP
 set service lldp interface all
 
-# DDNS
-set service dns dynamic name cloudflare address web # Change this back once we're done!
-set service dns dynamic name cloudflare protocol cloudflare
-set service dns dynamic name cloudflare host-name ${SECRET_DOMAIN}
-set service dns dynamic name cloudflare username ${SECRET_CLOUDFLARE_LOGIN}
-set service dns dynamic name cloudflare password ${SECRET_CLOUDFLARE_PASSWORD}
-set service dns dynamic name cloudflare zone ${SECRET_DOMAIN}
-set service dns dynamic name cloudflare web-options url 'http://checkip.dyndns.com/'
-set service dns dynamic name cloudflare web-options skip 'Current IP Address: '
+# Broken!
+# # DDNS
+# set service dns dynamic name cloudflare address web # Change this back once we're done!
+# set service dns dynamic name cloudflare protocol cloudflare
+# set service dns dynamic name cloudflare host-name ${SECRET_DOMAIN}
+# set service dns dynamic name cloudflare username ${SECRET_CLOUDFLARE_LOGIN}
+# set service dns dynamic name cloudflare password ${SECRET_CLOUDFLARE_PASSWORD}
+# set service dns dynamic name cloudflare zone ${SECRET_DOMAIN}
+# set service dns dynamic name cloudflare web-options url 'http://checkip.dyndns.com/'
+# set service dns dynamic name cloudflare web-options skip 'Current IP Address: '
