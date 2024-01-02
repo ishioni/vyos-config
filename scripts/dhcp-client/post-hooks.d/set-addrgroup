@@ -21,6 +21,7 @@ set firewall group address-group ADDRv4_${interface} address ${new_ip_address}
 commit comment "Updated address-group ADDRv4${interface} from DHCP"
 save
 EOF
+  python3 -c "import sys;sys.path.insert(1, '/usr/lib/python3/dist-packages/vyos/utils/');from commit import *;wait_for_commit_lock()"
   sg vyattacfg -c "/usr/bin/vbash -x ${tmpfile}" >> ${logfile}
   fi
 fi
