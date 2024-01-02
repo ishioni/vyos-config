@@ -6,6 +6,10 @@ set firewall global-options state-policy related action 'accept'
 set firewall global-options all-ping enable
 set firewall global-options broadcast-ping disable
 
+# Empty WAN address group for NAT - this will be filled on boot by the dhcp hook
+set firewall group address-group ADDRv4_eth0
+set firewall group address-group ADDRv4_pppoe0
+
 # Unifi devices
 set firewall group address-group unifi_devices address '10.1.0.10-10.1.0.19' # Switches
 set firewall group address-group unifi_devices address '10.1.0.20-10.1.0.29' # AP's
