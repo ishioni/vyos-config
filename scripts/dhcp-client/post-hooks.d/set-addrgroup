@@ -40,5 +40,6 @@ save
 EOF
   wait_for_lock
   sg vyattacfg -c "/usr/bin/vbash -x ${tmpfile}" >> ${logfile}
+  rm $tmpfile
   fi
 fi
