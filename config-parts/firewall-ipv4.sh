@@ -29,7 +29,7 @@ set firewall ipv4 name trusted-local default-action 'accept'
 # WAN -> LOCAL
 set firewall ipv4 name wan-local description 'From WAN to LOCAL'
 set firewall ipv4 name wan-local default-action 'drop'
-set firewall ipv4 name wan-local enable-default-log
+set firewall ipv4 name wan-local default-log
 set firewall ipv4 name wan-local rule 1 action 'accept'
 set firewall ipv4 name wan-local rule 1 description 'Rule: accept_ssh'
 set firewall ipv4 name wan-local rule 1 destination port 'ssh'
@@ -69,7 +69,7 @@ set firewall ipv4 name trusted-containers default-action 'accept'
 # WAN -> Containers
 set firewall ipv4 name wan-containers description 'From WAN to Containers'
 set firewall ipv4 name wan-containers default-action 'drop'
-set firewall ipv4 name wan-containers enable-default-log
+set firewall ipv4 name wan-containers default-log
 
 ### Zone NETWORK ###
 
@@ -100,7 +100,7 @@ set firewall ipv4 name trusted-network default-action 'accept'
 # WAN -> NETWORK
 set firewall ipv4 name wan-network description 'From WAN to NETWORK'
 set firewall ipv4 name wan-network default-action 'drop'
-set firewall ipv4 name wan-network enable-default-log
+set firewall ipv4 name wan-network default-log
 
 ### Zone SERVERS ###
 
@@ -131,7 +131,7 @@ set firewall ipv4 name trusted-servers default-action 'accept'
 # WAN -> SERVERS
 set firewall ipv4 name wan-servers description 'From WAN to SERVERS'
 set firewall ipv4 name wan-servers default-action 'drop'
-set firewall ipv4 name wan-servers enable-default-log
+set firewall ipv4 name wan-servers default-log
 
 ### Zone IOT ###
 
@@ -162,7 +162,7 @@ set firewall ipv4 name trusted-iot default-action 'accept'
 # WAN -> IOT
 set firewall ipv4 name wan-iot description 'From WAN to IOT'
 set firewall ipv4 name wan-iot default-action 'drop'
-set firewall ipv4 name wan-iot enable-default-log
+set firewall ipv4 name wan-iot default-log
 
 # ### Zone KUBERNETES ###
 
@@ -193,7 +193,7 @@ set firewall ipv4 name trusted-kubernetes default-action 'accept'
 # WAN -> KUBERNETES
 set firewall ipv4 name wan-kubernetes description 'From WAN to KUBERNETES'
 set firewall ipv4 name wan-kubernetes default-action 'drop'
-set firewall ipv4 name wan-kubernetes enable-default-log
+set firewall ipv4 name wan-kubernetes default-log
 
 ### Zone TRUSTED ###
 
@@ -224,7 +224,7 @@ set firewall ipv4 name kubernetes-trusted default-action 'accept'
 # WAN -> TRUSTED
 set firewall ipv4 name wan-trusted description 'From WAN to TRUSTED'
 set firewall ipv4 name wan-trusted default-action 'drop'
-set firewall ipv4 name wan-trusted enable-default-log
+set firewall ipv4 name wan-trusted default-log
 
 ### Zone WAN ###
 
