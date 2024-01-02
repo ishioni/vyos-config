@@ -25,7 +25,7 @@ wait_for_lock() {
 if [ "$RUN" = "yes" ]; then
   if [[ _"$reason"_ == "_BOUND_" ]] ; then
     logfile=/tmp/set-addrgroup-$interface.debug
-    echo "BOUND on $interface" >> $logfile
+    echo "BOUND on $interface" > $logfile
     tmpfile=$(mktemp /tmp/dhcp-script.XXXXXXXX)
     chmod -R 755 "${tmpfile}"
     echo "$tmpfile" >> $logfile
