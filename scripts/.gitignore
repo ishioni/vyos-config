@@ -11,3 +11,4 @@
 !/commit/pre-hooks.d
 /commit/pre-hooks.d/*
 !/commit/pre-hooks.d/**.sh
+!/dhcp-client
