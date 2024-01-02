@@ -4,7 +4,7 @@
 
 # To enable this script set the following variable to "yes"
 RUN="yes"
-TIMEOUT=30
+TIMEOUT=60
 SECONDS=0
 LOCKFILE=/tmp/configdone
 
