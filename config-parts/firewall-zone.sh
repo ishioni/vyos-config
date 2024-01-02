@@ -78,7 +78,7 @@ set firewall zone trusted from iot firewall name 'iot-trusted'
 set firewall zone trusted from kubernetes firewall name 'kubernetes-trusted'
 set firewall zone trusted from wan firewall name 'wan-trusted'
 
-set firewall zone wan interface 'pppoe0'
+set firewall zone wan interface 'eth0'
 set firewall zone wan description 'WAN zone'
 set firewall zone wan default-action 'drop'
 set firewall zone wan from local firewall name 'local-wan'
