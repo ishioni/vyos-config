@@ -21,12 +21,10 @@ set service mdns repeater interface br0.5
 set service lldp interface all
 
 # DDNS
-set service dns dynamic interface eth0 service cloudflare protocol 'cloudflare'
-set service dns dynamic interface eth0 service cloudflare host-name ${SECRET_DOMAIN}
-set service dns dynamic interface eth0 service cloudflare login ${SECRET_CLOUDFLARE_LOGIN}
-set service dns dynamic interface eth0 service cloudflare password ${SECRET_CLOUDFLARE_PASSWORD}
-set service dns dynamic interface eth0 service cloudflare zone ${SECRET_DOMAIN}
-set service dns dynamic interface eth0 use-web url 'http://checkip.dyndns.com/'
-set service dns dynamic interface eth0 use-web skip 'Current IP Address: '
-
-}
+set service dns dynamic name cloudflare address eth0 
+set service dns dynamic name cloudflare host-name ${SECRET_DOMAIN}
+set service dns dynamic name cloudflare username ${SECRET_CLOUDFLARE_LOGIN}
+set service dns dynamic name cloudflare password ${SECRET_CLOUDFLARE_PASSWORD}
+set service dns dynamic name cloudflare zone ${SECRET_DOMAIN}
+set service dns dynamic name cloudflare web-options url 'http://checkip.dyndns.com/'
+set service dns dynamic name cloudflare web-options skip 'Current IP Address: '
