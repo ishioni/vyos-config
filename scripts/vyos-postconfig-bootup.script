@@ -3,6 +3,9 @@
 # applied. Any modifications required to work around unfixed bugs or use
 # services not available through the VyOS CLI system can be placed here.
 
+# Mark config as done
+echo $(date +%s) > /tmp/configdone 
+
 if [ -d "/home/vyos" ]; then
 # Add dotfiles for home directory
   tee /home/vyos/.gitconfig <<END >/dev/null
