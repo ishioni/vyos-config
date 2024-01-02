@@ -21,7 +21,7 @@ set service mdns repeater interface br0.5
 set service lldp interface all
 
 # DDNS
-# set service dns dynamic name cloudflare address eth0
+set service dns dynamic name cloudflare address web # Change this back once we're done!
 set service dns dynamic name cloudflare protocol cloudflare
 set service dns dynamic name cloudflare host-name ${SECRET_DOMAIN}
 set service dns dynamic name cloudflare username ${SECRET_CLOUDFLARE_LOGIN}
