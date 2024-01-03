@@ -3,8 +3,6 @@
 set service dhcp-server hostfile-update
 set service dhcp-server host-decl-name 
 
-set service dhcp-server global-parameters 'option ubnt.unifi-controller 10.5.0.2;'
-
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.1.1'
