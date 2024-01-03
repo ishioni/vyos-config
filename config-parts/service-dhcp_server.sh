@@ -3,13 +3,7 @@
 set service dhcp-server hostfile-update
 set service dhcp-server host-decl-name 
 
-set service dhcp-server global-parameters 'option space ubnt;'
-set service dhcp-server global-parameters 'option ubnt.unifi-address code 1 = ip-address;'
-set service dhcp-server global-parameters 'class &quot;ubnt&quot; {'
-set service dhcp-server global-parameters 'match if substring (option vendor-class-identifier, 0, 4) = &quot;ubnt&quot;;'
-set service dhcp-server global-parameters 'option vendor-class-identifier &quot;ubnt&quot;;'
-set service dhcp-server global-parameters 'vendor-option-space ubnt;'
-set service dhcp-server global-parameters '}'
+set service dhcp-server global-parameters 'option ubnt.unifi-controller 10.5.0.2;'
 
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
