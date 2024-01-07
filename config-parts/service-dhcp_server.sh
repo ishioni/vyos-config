@@ -12,7 +12,7 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 lease '86
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 name-server '10.1.1.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 start '10.1.1.128'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 stop '10.1.1.250'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 subnet-parameters 'option ubnt.unifi-address 10.5.0.2;'
+# set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 subnet-parameters 'option ubnt.unifi-address 10.5.0.2;'
 
 # NETWORK static mappings
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping bigswitch ip-address '10.1.1.10'
