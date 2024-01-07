@@ -5,11 +5,6 @@
 !.gitignore
 !.gitkeep
 
-# Persistent cache dir
-!/cache/
-/cache/*
-!/cache/.gitkeep
-
 #Config dir
 !/config/
 /config/*
