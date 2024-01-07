@@ -3,7 +3,10 @@
 
 # Track certain files and directories
 !cert
+cert/*
 !data
+data/*
 !logs
+logs/*
 !.gitignore
 !.gitkeep
