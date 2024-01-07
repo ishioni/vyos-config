@@ -4,7 +4,7 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN 1.10.in-addr.arpa.
-@ 3600 IN SOA rootnode.ishioni.casa. rootnode.ishioni.casa. (
+@ 3600 IN SOA 1.10.in-addr.arpa. gateway.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -13,13 +13,13 @@ $ORIGIN 1.10.in-addr.arpa.
 )
 
 ; NS Records
-@                           IN  NS rootnode.ishioni.casa.
+@                           IN  NS gateway.ishioni.casa.
 
 ; Reset origin
 $ORIGIN in-addr.arpa.
 
 ; NETWORK
-1.1.1.10                    IN  PTR  rootnode.ishioni.casa.
+1.1.1.10                    IN  PTR  gateway.ishioni.casa.
 
 ; SERVERS
 2.2.1.10                    IN  PTR  quadrant.ishioni.casa.
@@ -35,4 +35,4 @@ $ORIGIN in-addr.arpa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
 
 ; KUBERNETES
-19.4.1.10                   IN  PTR  talos.kubernetes.internal
+19.4.1.10                   IN  PTR  talos.kubernetes.internal.

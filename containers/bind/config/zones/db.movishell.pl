@@ -4,7 +4,7 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN movishell.pl.
-@ 3600 IN SOA rootnode.ishioni.casa. rootnode.ishioni.casa. (
+@ 3600 IN SOA movishell.pl. gateway.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -13,7 +13,7 @@ $ORIGIN movishell.pl.
 )
 
 ; NS Records
-@                          IN  NS rootnode.ishioni.casa.
+@                          IN  NS gateway.ishioni.casa.
 
 ; Upstream
 mail.movishell.pl.	1	IN	A	66.111.4.147

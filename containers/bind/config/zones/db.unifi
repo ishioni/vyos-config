@@ -4,7 +4,7 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN unifi.
-@ 3600 IN SOA rootnode.ishioni.casa. rootnode.ishioni.casa. (
+@ 3600 IN SOA unifi. gateway.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -13,7 +13,7 @@ $ORIGIN unifi.
 )
 
 ; NS Records
-@                          IN  NS gateway.bjw-s.casa.
+@                          IN  NS gateway.ishioni.casa.
 
 ; CNAME Records
 @                          IN  A  10.5.0.10

@@ -4,7 +4,7 @@
 ; SOA Records
 $TTL 3600
 $ORIGIN kubernetes.internal.
-@ 3600 IN SOA rootnode.ishioni.casa. rootnode.ishioni.casa. (
+@ 3600 IN SOA kubernetes.internal. gateway.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -13,7 +13,7 @@ $ORIGIN kubernetes.internal.
 )
 
 ; NS Records
-@                          IN  NS rootnode.ishioni.casa.
+@                          IN  NS gateway.ishioni.casa.
 
 ; Kube-api
 talos                      IN  A  10.1.4.19
