@@ -1,7 +1,16 @@
 #!/bin/vbash
 
-set service dhcp-server hostfile-update
-set service dhcp-server host-decl-name 
+# DDNS
+set service dhcp-server dynamic-dns-update
+set service dhcp-server global-parameters "key dhcpd { algorithm hmac-md5; secret ${SECRET_BIND_DHCPD_KEY}; };"
+set service dhcp-server global-parameters 'zone ishioni.casa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server global-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server global-parameters 'zone kubernetes.internal. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server global-parameters 'ddns-domainname &quot;kubernetes.internal.&quot;;'
+set service dhcp-server global-parameters 'zone 1.10.in-addr.arpa. { primary 10.5.0.3; key dhcpd; }'
+set service dhcp-server global-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
+set service dhcp-server global-parameters 'update-optimization off;'
+set service dhcp-server global-parameters 'update-conflict-detection off;'
 
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
