@@ -6,8 +6,8 @@ set service dhcp-server host-decl-name
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.1.1'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name network.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search network.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name ishioni.casa
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search ishioni.casa
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 lease '86400'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 name-server '10.1.1.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 start '10.1.1.128'
@@ -29,8 +29,8 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-ma
 # SERVERS
 set service dhcp-server shared-network-name SERVERS authoritative
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 default-router '10.1.2.1'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-name servers.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-search servers.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-name ishioni.casa
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-search ishioni.casa
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 lease '86400'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 name-server '10.1.2.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 start '10.1.2.128'
@@ -44,8 +44,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-ma
 # IOT
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 default-router '10.1.3.1'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name iot.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-search iot.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name ishioni.casa
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-search ishioni.casa
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.1.3.1'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.128'
@@ -103,8 +103,8 @@ set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static
 # TRUSTED
 set service dhcp-server shared-network-name TRUSTED authoritative
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 default-router '10.1.5.1'
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-name trusted.${SECRET_DOMAIN}
-set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search trusted.${SECRET_DOMAIN}
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-name ishioni.casa
+set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search ishioni.casa
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 lease '86400'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 name-server '10.1.5.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 start '10.1.5.10'

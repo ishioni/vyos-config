@@ -1,0 +1,22 @@
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+!.gitkeep
+
+# Persistent cache dir
+!/cache/
+/cache/*
+!/cache/.gitkeep
+
+#Config dir
+!/config/
+/config/*
+!/config/named.conf
+!/config/dhcpd.key.tmpl
+!/config/externaldns.key.tmpl
+!/config/rndc.key.tmpl
+!/config/zones/
+/config/zones/*
+!/config/zones/db.*

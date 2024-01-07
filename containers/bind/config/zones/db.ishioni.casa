@@ -1,0 +1,41 @@
+; Make sure to update the epoch time in the SOA records so coreDNS picks up the changes automatically
+; https://www.epochconverter.com/
+
+; SOA Records
+$TTL 3600
+$ORIGIN ishioni.casa.
+@ 3600 IN SOA rootnode.bjw-s.casa. rootnode.bjw-s.casa. (
+  1690965199         ; serial number (epoch timestamp)
+  7200               ; refresh period
+  3600               ; retry period
+  1209600            ; expire time
+  3600               ; minimum ttl
+)
+
+; NS Records
+@                             IN  NS rootnode.ishioni.casa.
+
+; NETWORK
+rootnode                      IN  A  10.1.1.1
+
+; SERVERS
+quadrant                      IN  A  10.1.2.2
+proxmox-1                     IN  A  10.1.2.3
+proxmox-2                     IN  A  10.1.2.4
+proxmox-3                     IN  A  10.1.2.5
+proxmox-4                     IN  A  10.1.2.6
+
+; IOT
+rx-v679                       IN  A  10.1.3.4
+thesucc                       IN  A  10.1.3.6
+camera-kids                   IN  A  10.1.3.16
+camera-bedroom                IN  A  10.1.3.17
+
+; KUBERNETES
+; NOTHING HERE YET
+
+; Containers
+; NOTHING HERE YET
+
+; CNAME records
+; something                       IN  CNAME  something.ishioni.casa
