@@ -29,7 +29,7 @@ set container name bind shared-memory '0'
 set container name bind volume config destination '/etc/bind'
 set container name bind volume config source '/config/containers/bind/config'
 set container name bind volume config mode 'ro'
-set container name bind volume cache source '/config/containers/bind/cache'
+set container name bind volume cache source '/config/bind/cache'
 set container name bind volume cache destination '/var/cache/bind'
 set container name bind volume cache mode 'rw'
 
