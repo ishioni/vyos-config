@@ -15,15 +15,11 @@ set interfaces ethernet eth6 description 'SFP2'
 set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # WAN
-set interfaces ethernet eth0 address dhcp
-
-# Not until switchover
-set interfaces ethernet eth0 vif 35 description 'Internet'
-
-# set interfaces pppoe pppoe0 description 'WAN - Fiber'
-# set interfaces pppoe pppoe0 source-interface 'eth0.35'
-# set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
-# set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
+set interfaces bridge br0 vif 35 description 'Internet'
+set interfaces pppoe pppoe0 description 'WAN - Fiber'
+set interfaces pppoe pppoe0 source-interface 'br0.35'
+set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
+set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
@@ -49,6 +45,7 @@ set interfaces bridge br0 vif 4 description 'KUBERNETES'
 set interfaces bridge br0 vif 5 address '10.1.5.1/24'
 set interfaces bridge br0 vif 5 description 'TRUSTED'
 
+# Wireguard
 set interfaces wireguard wg0 address '10.254.254.1/24'
 set interfaces wireguard wg0 description 'WIREGUARD'
 set interfaces wireguard wg0 private-key "${SECRET_WIREGUARD_PRIVATE_KEY}"
