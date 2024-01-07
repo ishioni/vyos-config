@@ -3,7 +3,7 @@
 
 ; SOA Records
 $TTL 3600
-$ORIGIN bjw-s.dev.
+$ORIGIN movishell.pl.
 @ 3600 IN SOA rootnode.ishioni.casa. rootnode.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
