@@ -33,6 +33,9 @@ $ORIGIN in-addr.arpa.
 6.3.1.10                    IN  PTR  thesucc.ishioni.casa.
 16.3.1.10                   IN  PTR  camera-kids.ishioni.casa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
+; CONTAINERS
+3.0.5.10                    IN  PTR  talos.ishioni.casa.
+4.0.5.10                    IN  PTR  proxmox.ishioni.casa.
 
 ; KUBERNETES
 19.4.1.10                   IN  PTR  talos.kubernetes.internal.
