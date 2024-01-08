@@ -15,6 +15,12 @@
 !scripts/
 !config-parts/
 !containers/
+!certs/
+certs/*
+!certs/.gitkeep
+!secrets/
+secrets/*
+!secrets/.gitkeep
 
 # CI
 !.github/

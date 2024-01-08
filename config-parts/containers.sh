@@ -67,3 +67,26 @@ set container name cloudflare-ddns image 'docker.io/favonia/cloudflare-ddns:1.11
 set container name cloudflare-ddns memory '0'
 set container name cloudflare-ddns restart 'on-failure'
 set container name cloudflare-ddns shared-memory '0'
+
+# HAProxy talos
+set container name haproxy-talos image 'docker.io/library/haproxy:2.9.1'
+set container name haproxy-talos memory '0'
+set container name haproxy-talos network services address '10.5.0.3'
+set container name haproxy-talos restart 'on-failure'
+set container name haproxy-talos shared-memory '0'
+set container name haproxy-talos volume config source '/config/containers/haproxy/talos/haproxy.cfg'
+set container name haproxy-talos volume config destination '/usr/local/etc/haproxy/haproxy.cfg'
+set container name haproxy-talos volume config mode 'ro'
+
+# HAProxy proxmox
+set container name haproxy-proxmox image 'docker.io/library/haproxy:2.9.1'
+set container name haproxy-proxmox memory '0'
+set container name haproxy-proxmox network services address '10.5.0.4'
+set container name haproxy-proxmox restart 'on-failure'
+set container name haproxy-proxmox shared-memory '0'
+set container name haproxy-proxmox volume config source '/config/containers/haproxy/proxmox/haproxy.cfg'
+set container name haproxy-proxmox volume config destination '/usr/local/etc/haproxy/haproxy.cfg'
+set container name haproxy-proxmox volume config mode 'ro'
+set container name haproxy-proxmox volume certs source '/config/containers/haproxy/proxmox/haproxy.cfg'
+set container name haproxy-proxmox volume certs destination '/usr/local/etc/haproxy/haproxy.cfg'
+set container name haproxy-proxmox volume certs mode 'ro'
