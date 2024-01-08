@@ -20,7 +20,7 @@ set interfaces pppoe pppoe0 description 'WAN - Fiber'
 set interfaces pppoe pppoe0 source-interface 'eth0.35'
 set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
 set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
-set interfaces pppoe pppoe0 ip clamp-mss-to-pmtu
+set interfaces pppoe pppoe0 ip adjust-mss clamp-mss-to-pmtu
 
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
