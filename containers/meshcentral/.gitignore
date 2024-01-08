@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+!/backups/
+/backups/*
+!/backups/.gitkeep
+!/data/
+/data/*
+!/data/.gitkeep
+!/files/
+/files/*
+!/files/.gitkeep
+!config.json.tmpl
