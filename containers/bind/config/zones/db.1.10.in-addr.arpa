@@ -3,8 +3,8 @@
 
 ; SOA Records
 $TTL 3600
-$ORIGIN 1.10.in-addr.arpa.
-@ 3600 IN SOA 1.10.in-addr.arpa. gateway.ishioni.casa. (
+$ORIGIN 10.in-addr.arpa.
+@ 3600 IN SOA 10.in-addr.arpa. gateway.ishioni.casa. (
   1690965199         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
@@ -33,9 +33,11 @@ $ORIGIN in-addr.arpa.
 6.3.1.10                    IN  PTR  thesucc.ishioni.casa.
 16.3.1.10                   IN  PTR  camera-kids.ishioni.casa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
+
 ; CONTAINERS
 3.0.5.10                    IN  PTR  talos.ishioni.casa.
 4.0.5.10                    IN  PTR  proxmox.ishioni.casa.
+10.0.5.10                   IN  PTR  unifi.ishioni.casa.
 
 ; KUBERNETES
 19.4.1.10                   IN  PTR  talos.kubernetes.internal.

@@ -7,7 +7,7 @@ set service dhcp-server global-parameters 'zone ishioni.casa. { primary 10.5.0.2
 set service dhcp-server global-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
 set service dhcp-server global-parameters 'zone kubernetes.internal. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server global-parameters 'ddns-domainname &quot;kubernetes.internal.&quot;;'
-set service dhcp-server global-parameters 'zone 1.10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server global-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server global-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server global-parameters 'update-optimization off;'
 set service dhcp-server global-parameters 'update-conflict-detection off;'
