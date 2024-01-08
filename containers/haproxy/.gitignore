@@ -1,0 +1,12 @@
+# Ignore everything
+/*
+
+# Track certain files and directories
+!.gitignore
+
+!/proxmox/
+/proxmox/*
+!/proxmox/haproxy.cfg
+!/talos/
+/talos/*
+!/talos/haproxy.cfg
