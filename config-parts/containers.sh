@@ -161,3 +161,29 @@ set container name meshcentral volume tlskey mode 'ro'
 set container name meshcentral volume tlscert source '/config/certs/cert.pem'
 set container name meshcentral volume tlscert destination '/opt/meshcentral/meshcentral-data/webserver-cert-public.crt'
 set container name meshcentral volume tlscert mode 'ro'
+
+# node-exporter
+set container name node-exporter environment procfs value '/host/proc'
+set container name node-exporter environment rootfs value '/host/rootfs'
+set container name node-exporter environment sysfs value '/host/sys'
+set container name node-exporter image 'quay.io/prometheus/node-exporter:v1.7.0'
+set container name node-exporter memory '0'
+set container name node-exporter allow-host-networks
+set container name node-exporter restart 'on-failure'
+set container name node-exporter shared-memory '0'
+set container name node-exporter volume procfs source '/proc'
+set container name node-exporter volume procfs destination '/host/proc'
+set container name node-exporter volume procfs mode 'ro'
+set container name node-exporter volume rootfs source '/'
+set container name node-exporter volume rootfs destination '/host/rootfs'
+set container name node-exporter volume rootfs mode 'ro'
+set container name node-exporter volume sysfs source '/sys'
+set container name node-exporter volume sysfs destination '/host/sys'
+set container name node-exporter volume sysfs mode 'ro'
+
+# speedtest-exporter
+set container name speedtest-exporter image 'ghcr.io/miguelndecarvalho/speedtest-exporter:v3.5.4'
+set container name speedtest-exporter memory '0'
+set container name speedtest-exporter allow-host-networks
+set container name speedtest-exporter restart 'on-failure'
+set container name speedtest-exporter shared-memory '0'
