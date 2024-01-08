@@ -109,3 +109,26 @@ set container name haproxy-proxmox volume config mode 'ro'
 set container name haproxy-proxmox volume certs source '/config/certs'
 set container name haproxy-proxmox volume certs destination '/etc/haproxy/certs'
 set container name haproxy-proxmox volume certs mode 'ro'
+
+# onepassword-connect
+set container name onepassword-connect image 'docker.io/1password/connect-api:1.7.2'
+set container name onepassword-connect environment TZ value 'Europe/Warsaw'
+set container name onepassword-connect environment OP_SESSION value "${SECRET_OP_CREDENTIALS}"
+set container name onepassword-connect environment OP_HTTP_PORT value '8438'
+set container name onepassword-connect memory '0'
+set container name onepassword-connect network containers address '10.5.0.5'
+set container name onepassword-connect shared-memory '0'
+set container name onepassword-connect volume data source '/tmp/onepassword/data'
+set container name onepassword-connect volume data destination '/home/opuser/.op/data'
+set container name onepassword-connect volume data mode 'rw'
+
+# onepassword-sync
+set container name onepassword-sync image 'docker.io/1password/connect-sync:1.7.2'
+set container name onepassword-sync environment TZ value 'Europe/Warsaw'
+set container name onepassword-sync memory '0'
+set container name onepassword-sync shared-memory '0'
+set container name onepassword-sync network containers address '10.5.0.6'
+set container name onepassword-sync environment OP_SESSION value "${SECRET_OP_CREDENTIALS}"
+set container name onepassword-sync volume data source '/tmp/onepassword/data'
+set container name onepassword-sync volume data destination '/home/opuser/.op/data'
+set container name onepassword-sync volume data mode 'rw'
