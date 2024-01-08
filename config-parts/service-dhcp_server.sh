@@ -53,9 +53,6 @@ set service dhcp-server shared-network-name SERVERS shared-network-parameters 'z
 set service dhcp-server shared-network-name SERVERS shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
 set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'update-optimization off;'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'update-conflict-detection off;'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'allow client-updates;'
 
 # SERVERS static mappings
 
@@ -75,9 +72,6 @@ set service dhcp-server shared-network-name IOT shared-network-parameters 'zone 
 set service dhcp-server shared-network-name IOT shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
 set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'update-optimization off;'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'update-conflict-detection off;'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'allow client-updates;'
 
 # IOT static mappings
 
@@ -115,9 +109,6 @@ set service dhcp-server shared-network-name KUBERNETES shared-network-parameters
 set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-domainname &quot;kubernetes.internal.&quot;;'
 set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'update-optimization off;'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'update-conflict-detection off;'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'allow client-updates;'
 
 # KUBERNETES static mappings
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 ip-address '10.1.4.10'
@@ -148,9 +139,6 @@ set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'z
 set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
 set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
 set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'update-optimization off;'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'update-conflict-detection off;'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'allow client-updates;'
 
 # LAN static mappings
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'
