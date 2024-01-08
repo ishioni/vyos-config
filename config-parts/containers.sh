@@ -116,7 +116,7 @@ set container name onepassword-connect environment TZ value 'Europe/Warsaw'
 set container name onepassword-connect environment OP_SESSION value "${SECRET_OP_CREDENTIALS}"
 set container name onepassword-connect environment OP_HTTP_PORT value '8438'
 set container name onepassword-connect memory '0'
-set container name onepassword-connect network containers address '10.5.0.5'
+set container name onepassword-connect network services address '10.5.0.5'
 set container name onepassword-connect shared-memory '0'
 set container name onepassword-connect volume data source '/tmp/onepassword/data'
 set container name onepassword-connect volume data destination '/home/opuser/.op/data'
@@ -127,7 +127,7 @@ set container name onepassword-sync image 'docker.io/1password/connect-sync:1.7.
 set container name onepassword-sync environment TZ value 'Europe/Warsaw'
 set container name onepassword-sync memory '0'
 set container name onepassword-sync shared-memory '0'
-set container name onepassword-sync network containers address '10.5.0.6'
+set container name onepassword-sync network services address '10.5.0.6'
 set container name onepassword-sync environment OP_SESSION value "${SECRET_OP_CREDENTIALS}"
 set container name onepassword-sync volume data source '/tmp/onepassword/data'
 set container name onepassword-sync volume data destination '/home/opuser/.op/data'
