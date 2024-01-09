@@ -26,6 +26,7 @@ proxmox-3                     IN  A  10.1.2.5
 proxmox-4                     IN  A  10.1.2.6
 
 ; IOT
+homeassistant                 IN  A  10.1.3.3
 rx-v679                       IN  A  10.1.3.4
 thesucc                       IN  A  10.1.3.6
 camera-kids                   IN  A  10.1.3.16
