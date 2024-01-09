@@ -58,7 +58,7 @@ set container name unifi cap-add 'net-bind-service'
 # cloudflare-ddns
 set container name cloudflare-ddns allow-host-networks
 set container name cloudflare-ddns environment CF_API_TOKEN value "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
-set container name cloudflare-ddns environment DOMAINS value "${SECRET_DOMAIN}"
+set container name cloudflare-ddns environment DOMAINS value 'external.movishell.pl'
 set container name cloudflare-ddns environment IP6_PROVIDER value "none"
 set container name cloudflare-ddns environment TZ value 'Europe/Warsaw'
 set container name cloudflare-ddns environment PGID value "1000"
