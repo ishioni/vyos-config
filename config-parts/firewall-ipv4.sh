@@ -30,10 +30,9 @@ set firewall ipv4 name trusted-local default-action 'accept'
 set firewall ipv4 name wan-local description 'From WAN to LOCAL'
 set firewall ipv4 name wan-local default-action 'drop'
 set firewall ipv4 name wan-local default-log
-# set firewall ipv4 name wan-local rule 1 action 'accept'
-# set firewall ipv4 name wan-local rule 1 description 'Rule: accept_ssh'
-# set firewall ipv4 name wan-local rule 1 destination port 'ssh'
-# set firewall ipv4 name wan-local rule 1 protocol 'tcp'
+set firewall ipv4 name wan-local rule 1 action 'accept'
+set firewall ipv4 name wan-local rule 1 description 'Rule: accept ICMP'
+set firewall ipv4 name wan-local rule 1 protocol 'icmp'
 set firewall ipv4 name wan-local rule 2 action 'accept'
 set firewall ipv4 name wan-local rule 2 description 'Rule: accept_wireguard'
 set firewall ipv4 name wan-local rule 2 destination group port-group 'wireguard'
@@ -136,7 +135,7 @@ set firewall ipv4 name wan-servers rule 1 action 'accept'
 set firewall ipv4 name wan-servers rule 1 description 'Rule: SSH jumphost'
 set firewall ipv4 name wan-servers rule 1 destination address '10.1.2.66'
 set firewall ipv4 name wan-servers rule 1 destination port 'ssh'
-set firewall ipv4 name wan-servers rule 1 protocol 'udp'
+set firewall ipv4 name wan-servers rule 1 protocol 'tcp'
 
 ### Zone IOT ###
 
