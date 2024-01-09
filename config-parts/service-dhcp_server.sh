@@ -56,7 +56,7 @@ set service dhcp-server shared-network-name SERVERS shared-network-parameters 'd
 
 # SERVERS static mappings
 
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell ip-address '10.1.2.4'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell ip-address '10.1.2.66'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell mac-address 'be:32:83:a0:de:8b'
 
 # IOT
@@ -79,8 +79,6 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping homeassistant mac-address '72:26:5b:e5:f9:d9'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping rxv679 ip-address '10.1.3.4'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping rxv679 mac-address '8c:8b:83:c8:95:19'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping brother ip-address '10.1.3.5'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping brother mac-address '90:0f:0c:d8:a1:e7'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc ip-address '10.1.3.10'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc mac-address '78:11:dc:82:bd:1f'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping lgoled ip-address '10.1.3.12'
