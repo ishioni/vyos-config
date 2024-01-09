@@ -43,7 +43,7 @@ set nat destination rule 104 description 'Jumphost'
 set nat destination rule 104 destination port '22'
 set nat destination rule 104 inbound-interface name 'pppoe0'
 set nat destination rule 104 protocol 'tcp'
-set nat destination rule 104 translation address '10.1.2.4'
+set nat destination rule 104 translation address '10.1.2.66'
 set nat destination rule 104 translation port '22'
 
 # Force NTP
