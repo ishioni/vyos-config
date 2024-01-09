@@ -53,7 +53,7 @@ set firewall ipv4 name trusted-local rule 999 log
 # WAN -> LOCAL
 set firewall ipv4 name wan-local description 'From WAN to LOCAL'
 set firewall ipv4 name wan-local default-action 'drop'
-set firewall ipv4 name wan-local default-log
+# set firewall ipv4 name wan-local default-log
 set firewall ipv4 name wan-local rule 100 action 'accept'
 set firewall ipv4 name wan-local rule 100 description 'Rule: accept ICMP'
 set firewall ipv4 name wan-local rule 100 protocol 'icmp'
