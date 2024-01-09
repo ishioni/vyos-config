@@ -3,6 +3,7 @@
 # Interface definitions
 set interfaces ethernet eth0 description 'POE'
 set interfaces ethernet eth0 hw-id '00:f0:da:ef:0a:d8'
+set interfaces ethernet eth0 mtu '1512'
 set interfaces ethernet eth1 description '2.5GbE'
 set interfaces ethernet eth1 hw-id '00:f0:da:ef:0a:d5'
 set interfaces ethernet eth2 description '2.5GbE'
@@ -16,11 +17,13 @@ set interfaces ethernet eth6 hw-id '50:6b:4b:0c:1d:d8'
 
 # WAN
 set interfaces ethernet eth0 vif 35 description 'Internet'
+set interfaces ethernet eth0 vif 35 mtu '1508'
 set interfaces pppoe pppoe0 description 'WAN - Fiber'
 set interfaces pppoe pppoe0 source-interface 'eth0.35'
 set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
 set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
-set interfaces pppoe pppoe0 ip adjust-mss clamp-mss-to-pmtu
+set interfaces pppoe pppoe0 mtu '1500'
+set interfaces pppoe pppoe0 ip adjust-mss 'clamp-mss-to-pmtu'
 
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
