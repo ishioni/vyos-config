@@ -34,7 +34,7 @@ shell                         IN  A  10.1.2.66
 ; IOT
 homeassistant                 IN  A  10.1.3.3
 rx-v679                       IN  A  10.1.3.4
-thesucc                       IN  A  10.1.3.6
+thesucc                       IN  A  10.1.3.10
 lgoled                        IN  A  10.1.3.12
 espzigbee                     IN  A  10.1.3.13
 camera-kids                   IN  A  10.1.3.16
