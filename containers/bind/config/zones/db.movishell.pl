@@ -15,6 +15,9 @@ $ORIGIN movishell.pl.
 ; NS Records
 @                          IN  NS gateway.ishioni.casa.
 
+; LB Record
+@                     IN  A 192.168.3.2
+
 ; Upstream
 mail.movishell.pl.	1	IN	A	66.111.4.147
 mail.movishell.pl.	1	IN	A	66.111.4.148
