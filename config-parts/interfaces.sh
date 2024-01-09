@@ -24,6 +24,7 @@ set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
 set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 set interfaces pppoe pppoe0 mtu '1500'
 set interfaces pppoe pppoe0 ip adjust-mss 'clamp-mss-to-pmtu'
+set interfaces pppoe pppoe0 no-peer-dns
 
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
