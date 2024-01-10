@@ -28,7 +28,7 @@ $ORIGIN in-addr.arpa.
 
 ; SERVERS
 2.2.1.10                    IN  PTR  quadrant.ishioni.casa.
-2.2.1.10                    IN  PTR  proxmox-1.ishioni.casa.
+3.2.1.10                    IN  PTR  proxmox-1.ishioni.casa.
 4.2.1.10                    IN  PTR  proxmox-2.ishioni.casa.
 5.2.1.10                    IN  PTR  proxmox-3.ishioni.casa.
 6.2.1.10                    IN  PTR  proxmox-4.ishioni.casa.
