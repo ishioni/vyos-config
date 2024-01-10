@@ -61,6 +61,8 @@ $ORIGIN in-addr.arpa.
 ; CONTAINERS
 3.0.5.10                    IN  PTR  talos.ishioni.casa.
 4.0.5.10                    IN  PTR  proxmox.ishioni.casa.
+4.0.5.10                    IN  PTR  talos.ishioni.casa.
+4.0.5.10                    IN  PTR  ui.ishioni.casa.
 5.0.5.10                    IN  PTR  opconnect.ishioni.casa.
 7.0.5.10                    IN  PTR  meshcentral.ishioni.casa.
 10.0.5.10                   IN  PTR  unifi.ishioni.casa.

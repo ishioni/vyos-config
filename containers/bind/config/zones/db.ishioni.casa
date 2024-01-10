@@ -46,8 +46,9 @@ quadrant                      IN  A  10.1.5.2
 coreelec                      IN  A  10.1.5.3
 
 ; Containers
-talos                         IN  A  10.5.0.3
+talos                         IN  A  10.5.0.4
 proxmox                       IN  A  10.5.0.4
+ui                            IN  A  10.5.0.4
 opconnect                     IN  A  10.5.0.5
 meshcentral                   IN  A  10.5.0.7
 unifi                          IN  A  10.5.0.10
