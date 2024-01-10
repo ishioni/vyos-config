@@ -23,7 +23,7 @@ set interfaces pppoe pppoe0 source-interface 'eth0.35'
 set interfaces pppoe pppoe0 authentication user "${SECRET_ISP_AUTH_USER}"
 set interfaces pppoe pppoe0 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 set interfaces pppoe pppoe0 mtu '1500'
-set interfaces pppoe pppoe0 ip adjust-mss '1452'
+set interfaces pppoe pppoe0 mru '1500'
 set interfaces pppoe pppoe0 'no-peer-dns'
 
 # BRIDGE
