@@ -16,6 +16,7 @@ $ORIGIN kubernetes.internal.
 @                          IN  NS gateway.ishioni.casa.
 
 ; KUBERNETES
+quadrant                   IN  A  10.1.4.2
 master-0                   IN  A  10.1.4.10
 master-1                   IN  A  10.1.4.11
 master-2                   IN  A  10.1.4.12

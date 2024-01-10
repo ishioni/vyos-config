@@ -20,11 +20,11 @@ $ORIGIN in-addr.arpa.
 
 ; NETWORK
 1.1.1.10                    IN  PTR  gateway.ishioni.casa.
-10.1.1.10                    IN  PTR  bigswitch.ishioni.casa.
-11.1.1.10                    IN  PTR  fastswitch.ishioni.casa.
-20.1.1.10                    IN  PTR  downap.ishioni.casa.
-21.1.1.10                    IN  PTR  midap.ishioni.casa.
-22.1.1.10                    IN  PTR  upap.ishioni.casa.
+10.1.1.10                   IN  PTR  bigswitch.ishioni.casa.
+11.1.1.10                   IN  PTR  fastswitch.ishioni.casa.
+20.1.1.10                   IN  PTR  downap.ishioni.casa.
+21.1.1.10                   IN  PTR  midap.ishioni.casa.
+22.1.1.10                   IN  PTR  upap.ishioni.casa.
 
 ; SERVERS
 2.2.1.10                    IN  PTR  quadrant.ishioni.casa.
@@ -35,15 +35,17 @@ $ORIGIN in-addr.arpa.
 66.2.1.10                   IN  PTR  shell.ishioni.casa.
 
 ; IOT
+2.3.1.10                    IN  PTR  quadrant.ishioni.casa.
 3.3.1.10                    IN  PTR  homeassistant.ishioni.casa.
 4.3.1.10                    IN  PTR  rx-v679.ishioni.casa.
-10.3.1.10                    IN  PTR  thesucc.ishioni.casa.
+10.3.1.10                   IN  PTR  thesucc.ishioni.casa.
 12.3.1.10                   IN  PTR  lgoled.ishioni.casa.
 13.3.1.10                   IN  PTR  espzigbee.ishioni.casa.
 16.3.1.10                   IN  PTR  camera-kids.ishioni.casa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
 
 ; KUBERNETES
+2.4.1.10                    IN  PTR  quadrant.kuberbetes.internal.
 10.4.1.10                   IN  PTR  master-0.kubernetes.internal.
 11.4.1.10                   IN  PTR  master-1.kubernetes.internal.
 12.4.1.10                   IN  PTR  master-2.kubernetes.internal.
@@ -53,6 +55,7 @@ $ORIGIN in-addr.arpa.
 22.4.1.10                   IN  PTR  worker-2.kubernetes.internal.
 
 ; TRUSTED
+2.5.1.10                    IN  PTR  quadrant.ishioni.casa.
 3.5.1.10                    IN  PTR  coreelec.ishioni.casa.
 
 ; CONTAINERS
