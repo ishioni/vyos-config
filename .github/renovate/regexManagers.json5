@@ -1,0 +1,12 @@
+"regexManagers": [
+  {
+    "description": "Generic Docker image Regex manager",
+    "fileMatch": [
+      "config-parts/.+\\.sh$"
+    ],
+    "matchStrings": [
+      "set container name .* image '?(?<depName>.*?):(?<currentValue>[^'\n]*=?)'?"
+    ],
+    "datasourceTemplate": "docker"
+  }
+]

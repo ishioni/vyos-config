@@ -1,0 +1,13 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: [
+    "github>ishioni/renovate-config",
+    "github>ishioni/renovate-config:automerge-github-actions",
+    "local>ishioni/vyos-config//.github/renovate/packageRules.json5",
+    "local>ishioni/vyos-config//.github/renovate/regexManagers.json5",
+  ],
+  platform: "github",
+  username: "ishioni-bot[bot]",
+  gitAuthor: "ishioni-bot <116219931+ishioni-bot[bot]@users.noreply.github.com>",
+  dependencyDashboardTitle: "Renovate Dashboard 🤖",
+}
