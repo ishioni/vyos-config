@@ -1,5 +1,11 @@
 #!/bin/vbash
 
+# LAN -> Leox masquarade
+set nat source rule 99 description 'LAN -> Leox'
+set nat source rule 99 destination address '192.168.100.0/24'
+set nat source rule 99 outbound-interface name 'eth0'
+set nat source rule 99 translation address 'masquerade'
+
 # LAN -> WAN masquerade
 set nat source rule 100 description 'LAN -> WAN'
 set nat source rule 100 destination address '0.0.0.0/0'

@@ -3,6 +3,7 @@
 # Interface definitions
 set interfaces ethernet eth0 description 'POE'
 set interfaces ethernet eth0 hw-id '00:f0:da:ef:0a:d8'
+set interfaces ethernet eth0 address '192.168.100.2/24'
 set interfaces ethernet eth0 mtu '1512'
 set interfaces ethernet eth1 description '2.5GbE'
 set interfaces ethernet eth1 hw-id '00:f0:da:ef:0a:d5'
