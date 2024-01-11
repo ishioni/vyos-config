@@ -1,12 +1,15 @@
-"regexManagers": [
-  {
-    "description": "Generic Docker image Regex manager",
-    "fileMatch": [
-      "config-parts/.+\\.sh$"
-    ],
-    "matchStrings": [
-      "set container name .* image '?(?<depName>.*?):(?<currentValue>[^'\n]*=?)'?"
-    ],
-    "datasourceTemplate": "docker"
-  }
-]
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "regexManagers": [
+    {
+      "description": "Generic Docker image Regex manager",
+      "fileMatch": [
+        "config-parts/.+\\.sh$"
+      ],
+      "matchStrings": [
+        "set container name .* image '?(?<depName>.*?):(?<currentValue>[^'\n]*=?)'?"
+      ],
+      "datasourceTemplate": "docker"
+    }
+  ]
+}
