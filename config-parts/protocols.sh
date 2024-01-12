@@ -22,3 +22,8 @@ set protocols bgp neighbor 10.1.4.21 remote-as '64503'
 set protocols bgp neighbor 10.1.4.22 description 'worker-2'
 set protocols bgp neighbor 10.1.4.22 address-family ipv4-unicast
 set protocols bgp neighbor 10.1.4.22 remote-as '64503'
+
+# TrueNAS BGP
+set protocols bgp neighbor 10.1.4.2 description 'truenas'
+set protocols bgp neighbor 10.1.4.2 address-family ipv4-unicast
+set protocols bgp neighbor 10.1.4.2 remote-as '64504'
