@@ -2,6 +2,7 @@
 
 # DDNS
 set service dhcp-server dynamic-dns-update
+set service dhcp-server host-decl-name
 set service dhcp-server global-parameters "key dhcpd { algorithm hmac-md5; secret ${SECRET_BIND_DHCPD_KEY}; };"
 
 set service dhcp-server global-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
@@ -12,9 +13,14 @@ set service dhcp-server global-parameters 'ddns-rev-domainname &quot;in-addr.arp
 set service dhcp-server global-parameters 'update-optimization off;'
 set service dhcp-server global-parameters 'update-conflict-detection off;'
 set service dhcp-server global-parameters 'allow client-updates;'
+set service dhcp-server global-parameters 'update-static-leases on;'
 
 # NETWORK
 set service dhcp-server shared-network-name NETWORK authoritative
+set service dhcp-server shared-network-name NETWORK shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name NETWORK shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name NETWORK shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server shared-network-name NETWORK shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 default-router '10.1.1.1'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-name 'ishioni.casa'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 domain-search 'ishioni.casa'
@@ -23,10 +29,6 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 name-serv
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 start '10.1.1.128'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 stop '10.1.1.250'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 subnet-parameters 'option ubnt.unifi-controller 10.5.0.10;'
-set service dhcp-server shared-network-name NETWORK shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name NETWORK shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name NETWORK shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
-set service dhcp-server shared-network-name NETWORK shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 
 # NETWORK static mappings
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping bigswitch ip-address '10.1.1.10'
@@ -42,6 +44,10 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-ma
 
 # SERVERS
 set service dhcp-server shared-network-name SERVERS authoritative
+set service dhcp-server shared-network-name SERVERS shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name SERVERS shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 default-router '10.1.2.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-name 'ishioni.casa'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 domain-search 'ishioni.casa'
@@ -49,10 +55,6 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 lease '86
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 name-server '10.1.2.1'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 start '10.1.2.128'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 stop '10.1.2.250'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
-set service dhcp-server shared-network-name SERVERS shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 
 # SERVERS static mappings
 
@@ -61,6 +63,10 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-ma
 
 # IOT
 set service dhcp-server shared-network-name IOT authoritative
+set service dhcp-server shared-network-name IOT shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 default-router '10.1.3.1'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-name 'ishioni.casa'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 domain-search 'ishioni.casa'
@@ -68,10 +74,6 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 lease '86400'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 name-server '10.1.3.1'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 start '10.1.3.128'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 range 0 stop '10.1.3.250'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
-set service dhcp-server shared-network-name IOT shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 
 # IOT static mappings
 
@@ -96,6 +98,10 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 
 # KUBERNETES
 set service dhcp-server shared-network-name KUBERNETES authoritative
+set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'zone kubernetes.internal. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-domainname &quot;kubernetes.internal.&quot;;'
+set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 default-router '10.1.4.1'
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-name 'kubernetes.internal'
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 domain-search 'kubernetes.internal'
@@ -103,10 +109,6 @@ set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 lease 
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 name-server '10.1.4.1'
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 start '10.1.4.128'
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 range 0 stop '10.1.4.250'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'zone kubernetes.internal. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-domainname &quot;kubernetes.internal.&quot;;'
-set service dhcp-server shared-network-name KUBERNETES shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 
 # KUBERNETES static mappings
 set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static-mapping master-0 ip-address '10.1.4.10'
@@ -126,6 +128,10 @@ set service dhcp-server shared-network-name KUBERNETES subnet 10.1.4.0/24 static
 
 # TRUSTED
 set service dhcp-server shared-network-name TRUSTED authoritative
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 default-router '10.1.5.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-name 'ishioni.casa'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 domain-search 'ishioni.casa'
@@ -133,10 +139,6 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 lease '86
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 name-server '10.1.5.1'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 start '10.1.5.10'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 stop '10.1.5.128'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
-set service dhcp-server shared-network-name TRUSTED shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
 
 # LAN static mappings
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'

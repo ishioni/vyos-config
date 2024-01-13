@@ -17,10 +17,10 @@ $ORIGIN kubernetes.internal.
 
 ; KUBERNETES
 quadrant                   IN  A  10.1.4.2
-master-0                   IN  A  10.1.4.10
-master-1                   IN  A  10.1.4.11
-master-2                   IN  A  10.1.4.12
+;master-0                   IN  A  10.1.4.10
+;master-1                   IN  A  10.1.4.11
+;master-2                   IN  A  10.1.4.12
 talos                      IN  A  10.1.4.19
-worker-0                   IN  A  10.1.4.20
-worker-1                   IN  A  10.1.4.21
-worker-2                   IN  A  10.1.4.22
+;worker-0                   IN  A  10.1.4.20
+;worker-1                   IN  A  10.1.4.21
+;worker-2                   IN  A  10.1.4.22
