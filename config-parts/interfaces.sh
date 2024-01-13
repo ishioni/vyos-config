@@ -33,6 +33,21 @@ set interfaces pppoe pppoe0 mtu '1500'
 set interfaces pppoe pppoe0 mru '1500'
 set interfaces pppoe pppoe0 'no-peer-dns'
 
+
+# WAN v6
+set interfaces pppoe pppoe1 description 'WAN - Fiber v6'
+set interfaces pppoe pppoe1 source-interface 'eth0.35'
+set interfaces pppoe pppoe1 authentication user "${SECRET_ISP_AUTH_USER}/ipv6"
+set interfaces pppoe pppoe1 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
+set interfaces pppoe pppoe1 ipv6 address 'autoconf'
+set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface br0.5 address '1'
+set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface br0.5 sla-id '0'
+set interfaces pppoe pppoe1 dhcpv6-options pd 0 length '56'
+set interfaces pppoe pppoe1 mtu '1500'
+set interfaces pppoe pppoe1 mru '1500'
+set interfaces pppoe pppoe1 'no-default-route'
+set interfaces pppoe pppoe1 'disable' #Broken!
+
 # BRIDGE
 set interfaces bridge br0 description 'NETWORK'
 set interfaces bridge br0 address '10.1.1.1/24'
