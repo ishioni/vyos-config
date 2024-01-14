@@ -28,9 +28,9 @@ proxmox-4                     IN  A  10.1.2.6
 ; IOT
 quadrant                      IN  A  10.1.3.2
 ;rx-v679                       IN  A  10.1.3.4
-thesucc                       IN  A  10.1.3.10
-camera-kids                   IN  A  10.1.3.16
-camera-bedroom                IN  A  10.1.3.17
+;thesucc                       IN  A  10.1.3.10
+camera-kids                   IN  A  10.1.3.7
+camera-bedroom                IN  A  10.1.3.8
 
 ; TRUSTED
 quadrant                      IN  A  10.1.5.2
