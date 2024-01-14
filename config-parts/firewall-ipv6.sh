@@ -6,7 +6,7 @@ set firewall ipv6 forward filter rule 10 jump-target WAN_IN
 
 set firewall ipv6 input filter rule 10 action jump
 set firewall ipv6 input filter rule 10 inbound-interface name pppoe1
-set firewall ipv6 input filter rule 10 jump-target WAN_IN
+set firewall ipv6 input filter rule 10 jump-target WAN_LOCAL
 
 set firewall ipv6 name WAN_IN default-action drop
 set firewall ipv6 name WAN_IN rule 10 action accept
