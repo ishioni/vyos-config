@@ -85,14 +85,14 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping rxv679 mac-address '8c:8b:83:c8:95:19'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping lgoled ip-address '10.1.3.6'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping lgoled mac-address '74:40:be:fa:a8:40'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-bedroom ip-address '10.1.3.7'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-kids ip-address '10.1.3.7'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-kids mac-address '8c:85:80:d9:dd:26'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-bedroom ip-address '10.1.3.8'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-bedroom mac-address '04:17:b6:1c:3c:a3'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-kids ip-address '10.1.3.8'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-kids mac-address '50:2c:c6:9b:a6:8d'
 # set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-downstairs ip-address '10.1.3.15'
 # set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-downstairs mac-address '50:2c:c6:9b:a6:83'
-# set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-kids ip-address '10.1.3.16'
-# set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-kids mac-address '8c:85:80:d9:dd:26'
+# set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-kids ip-address '10.1.3.16'
+# set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping ac-kids mac-address '50:2c:c6:9b:a6:8d'
 
 # KUBERNETES
 set service dhcp-server shared-network-name KUBERNETES authoritative
