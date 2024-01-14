@@ -45,4 +45,4 @@ meshcentral                   IN  A  10.5.0.7
 unifi                          IN  A  10.5.0.10
 
 ; CNAME records
-thesucc                       IN  CNAME  rockrobo.ishioni.casa
+;thesucc                       IN  CNAME  rockrobo.ishioni.casa
