@@ -1,6 +1,6 @@
 #!/bin/vbash
 
-set system host-name 'vyos'
+set system host-name 'gateway'
 set system domain-name 'ishioni.casa'
 
 set system ipv6 disable-forwarding
