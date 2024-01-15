@@ -61,6 +61,20 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 s
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell ip-address '10.1.2.66'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell mac-address 'be:32:83:a0:de:8b'
 
+# Talos
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 ip-address '10.1.2.30'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 mac-address '06:7c:87:5d:25:90'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 ip-address '10.1.2.31'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 mac-address '26:e4:d6:c6:ed:5d'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 ip-address '10.1.2.32'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 mac-address '4e:15:3e:e4:7b:f3'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 ip-address '10.1.2.40'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 mac-address '56:16:fd:96:ea:94'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 ip-address '10.1.2.41'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 mac-address 'ba:7b:01:68:5a:0e'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 ip-address '10.1.2.42'
+# set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 mac-address '06:ca:3f:73:46:6e'
+
 # IOT
 set service dhcp-server shared-network-name IOT authoritative
 set service dhcp-server shared-network-name IOT shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
