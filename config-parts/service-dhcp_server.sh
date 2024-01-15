@@ -62,18 +62,18 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-ma
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell mac-address 'be:32:83:a0:de:8b'
 
 # Talos
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 ip-address '10.1.2.30'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 mac-address 'bc:24:11:c4:1a:ac'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 ip-address '10.1.2.31'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 mac-address 'bc:24:11:53:b5:3b'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 ip-address '10.1.2.32'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 mac-address 'bc:24:11:ca:1e:77'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 ip-address '10.1.2.40'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 mac-address 'bc:24:11:ba:e4:28'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 ip-address '10.1.2.41'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 mac-address 'bc:24:11:25:9b:1f'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 ip-address '10.1.2.42'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 mac-address 'bc:24:11:23:42:56'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-0 ip-address '10.1.2.30'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-0 mac-address 'bc:24:11:c4:1a:ac'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-1 ip-address '10.1.2.31'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-1 mac-address 'bc:24:11:53:b5:3b'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-2 ip-address '10.1.2.32'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-2 mac-address 'bc:24:11:ca:1e:77'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-0 ip-address '10.1.2.40'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-0 mac-address 'bc:24:11:ba:e4:28'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-1 ip-address '10.1.2.41'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-1 mac-address 'bc:24:11:25:9b:1f'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-2 ip-address '10.1.2.42'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-worker-2 mac-address 'bc:24:11:23:42:56'
 
 # IOT
 set service dhcp-server shared-network-name IOT authoritative
