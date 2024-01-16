@@ -17,7 +17,7 @@ set nat destination rule 100 description 'Public ingress - http'
 set nat destination rule 100 destination port '80'
 set nat destination rule 100 inbound-interface name 'pppoe0'
 set nat destination rule 100 protocol 'tcp'
-set nat destination rule 100 translation address '192.168.3.2'
+set nat destination rule 100 translation address '10.84.2.2'
 set nat destination rule 100 translation port '80'
 
 # HTTPS
@@ -25,7 +25,7 @@ set nat destination rule 101 description 'Public ingress - https'
 set nat destination rule 101 destination port '443'
 set nat destination rule 101 inbound-interface name 'pppoe0'
 set nat destination rule 101 protocol 'tcp'
-set nat destination rule 101 translation address '192.168.3.2'
+set nat destination rule 101 translation address '10.84.2.2'
 set nat destination rule 101 translation port '443'
 
 # TORRENT
@@ -33,7 +33,7 @@ set nat destination rule 102 description 'uTP'
 set nat destination rule 102 destination port '51413'
 set nat destination rule 102 inbound-interface name 'pppoe0'
 set nat destination rule 102 protocol 'tcp'
-set nat destination rule 102 translation address '192.168.3.4'
+set nat destination rule 102 translation address '10.84.2.4'
 set nat destination rule 102 translation port '51413'
 
 # MINECRAFT
@@ -41,7 +41,7 @@ set nat destination rule 103 description 'Minecraft'
 set nat destination rule 103 destination port '25565'
 set nat destination rule 103 inbound-interface name 'pppoe0'
 set nat destination rule 103 protocol 'tcp'
-set nat destination rule 103 translation address '192.168.3.10'
+set nat destination rule 103 translation address '10.84.2.5'
 set nat destination rule 103 translation port '25565'
 
 # JUMPHOST
