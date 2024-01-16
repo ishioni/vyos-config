@@ -1,7 +1,7 @@
 #!/bin/vbash
 
 set protocols bgp system-as '65500'
-set protocols bgp parameters router-id '10.1.4.1'
+set protocols bgp parameters router-id '10.1.2.1'
 
 # TrueNAS BGP
 set protocols bgp neighbor 10.1.2.2 description 'truenas'
