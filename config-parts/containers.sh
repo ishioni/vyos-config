@@ -110,7 +110,7 @@ set container name onepassword-sync volume data destination '/home/opuser/.op/da
 set container name onepassword-sync volume data mode 'rw'
 
 # meshcentral
-set container name meshcentral image 'ghcr.io/ylianst/meshcentral:1.1.18'
+set container name meshcentral image 'ghcr.io/ylianst/meshcentral:1.1.19'
 set container name meshcentral environment TZ value 'Europe/Warsaw'
 set container name meshcentral environment NODE_ENV value 'production'
 set container name meshcentral environment HOSTNAME value 'meshcentral.ishioni.casa'
