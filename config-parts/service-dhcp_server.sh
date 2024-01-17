@@ -4,7 +4,6 @@
 set service dhcp-server dynamic-dns-update
 set service dhcp-server host-decl-name
 set service dhcp-server global-parameters "key dhcpd { algorithm hmac-md5; secret ${SECRET_BIND_DHCPD_KEY}; };"
-
 set service dhcp-server global-parameters 'update-optimization off;'
 set service dhcp-server global-parameters 'update-conflict-detection off;'
 set service dhcp-server global-parameters 'allow client-updates;'
