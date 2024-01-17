@@ -55,19 +55,6 @@ set container name unifi volume logs destination '/usr/lib/unifi/logs'
 set container name unifi volume logs mode 'rw'
 set container name unifi cap-add 'net-bind-service'
 
-# cloudflare-ddns
-set container name cloudflare-ddns allow-host-networks
-set container name cloudflare-ddns environment CF_API_TOKEN value "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
-set container name cloudflare-ddns environment DOMAINS value 'external.movishell.pl movishell.pl'
-set container name cloudflare-ddns environment IP6_PROVIDER value "none"
-set container name cloudflare-ddns environment TZ value 'Europe/Warsaw'
-set container name cloudflare-ddns environment PGID value "1000"
-set container name cloudflare-ddns environment PUID value "1000"
-set container name cloudflare-ddns image 'docker.io/favonia/cloudflare-ddns:1.11.0'
-set container name cloudflare-ddns memory '0'
-set container name cloudflare-ddns restart 'on-failure'
-set container name cloudflare-ddns shared-memory '0'
-
 # wildcard certificate
 set container name lego-auto image 'ghcr.io/bjw-s/lego-auto:v0.2.0'
 set container name lego-auto memory '0'
