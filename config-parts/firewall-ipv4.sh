@@ -34,14 +34,6 @@ set firewall ipv4 name iot-local rule 999 state 'invalid'
 set firewall ipv4 name iot-local rule 999 action 'accept'
 set firewall ipv4 name iot-local rule 999 log
 
-# KUBERNETES -> LOCAL
-set firewall ipv4 name kubernetes-local description 'From KUBERNETES to LOCAL'
-set firewall ipv4 name kubernetes-local default-action 'accept'
-set firewall ipv4 name kubernetes-local rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-local rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-local rule 999 action 'accept'
-set firewall ipv4 name kubernetes-local rule 999 log
-
 # TRUSTED -> LOCAL
 set firewall ipv4 name trusted-local description 'From TRUSTED to LOCAL'
 set firewall ipv4 name trusted-local default-action 'accept'
@@ -102,14 +94,6 @@ set firewall ipv4 name iot-containers rule 999 state 'invalid'
 set firewall ipv4 name iot-containers rule 999 action 'accept'
 set firewall ipv4 name iot-containers rule 999 log
 
-# KUBERNETES -> Containers
-set firewall ipv4 name kubernetes-containers description 'From KUBERNETES to Containers'
-set firewall ipv4 name kubernetes-containers default-action 'accept'
-set firewall ipv4 name kubernetes-containers rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-containers rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-containers rule 999 action 'accept'
-set firewall ipv4 name kubernetes-containers rule 999 log
-
 # TRUSTED -> Containers
 set firewall ipv4 name trusted-containers description 'From TRUSTED to Containers'
 set firewall ipv4 name trusted-containers default-action 'accept'
@@ -161,14 +145,6 @@ set firewall ipv4 name iot-network rule 999 state 'invalid'
 set firewall ipv4 name iot-network rule 999 action 'accept'
 set firewall ipv4 name iot-network rule 999 log
 
-# KUBERNETES -> NETWORK
-set firewall ipv4 name kubernetes-network description 'From KUBERNETES to NETWORK'
-set firewall ipv4 name kubernetes-network default-action 'accept'
-set firewall ipv4 name kubernetes-network rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-network rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-network rule 999 action 'accept'
-set firewall ipv4 name kubernetes-network rule 999 log
-
 # TRUSTED -> NETWORK
 set firewall ipv4 name trusted-network description 'From TRUSTED to NETWORK'
 set firewall ipv4 name trusted-network default-action 'accept'
@@ -219,14 +195,6 @@ set firewall ipv4 name iot-servers rule 999 description 'Rule: drop_invalid'
 set firewall ipv4 name iot-servers rule 999 state 'invalid'
 set firewall ipv4 name iot-servers rule 999 action 'accept'
 set firewall ipv4 name iot-servers rule 999 log
-
-# KUBERNETES -> SERVERS
-set firewall ipv4 name kubernetes-servers description 'From KUBERNETES to SERVERS'
-set firewall ipv4 name kubernetes-servers default-action 'accept'
-set firewall ipv4 name kubernetes-servers rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-servers rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-servers rule 999 action 'accept'
-set firewall ipv4 name kubernetes-servers rule 999 log
 
 # TRUSTED -> SERVERS
 set firewall ipv4 name trusted-servers description 'From TRUSTED to SERVERS'
@@ -304,14 +272,6 @@ set firewall ipv4 name servers-iot rule 999 state 'invalid'
 set firewall ipv4 name servers-iot rule 999 action 'accept'
 set firewall ipv4 name servers-iot rule 999 log
 
-# KUBERNETES -> IOT
-set firewall ipv4 name kubernetes-iot description 'From KUBERNETES to IOT'
-set firewall ipv4 name kubernetes-iot default-action 'accept'
-set firewall ipv4 name kubernetes-iot rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-iot rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-iot rule 999 action 'accept'
-set firewall ipv4 name kubernetes-iot rule 999 log
-
 # TRUSTED -> IOT
 set firewall ipv4 name trusted-iot description 'From TRUSTED to IOT'
 set firewall ipv4 name trusted-iot default-action 'accept'
@@ -328,65 +288,6 @@ set firewall ipv4 name wan-iot rule 999 description 'Rule: drop_invalid'
 set firewall ipv4 name wan-iot rule 999 state 'invalid'
 set firewall ipv4 name wan-iot rule 999 action 'accept'
 set firewall ipv4 name wan-iot rule 999 log
-
-# ### Zone KUBERNETES ###
-
-# LOCAL -> KUBERNETES
-set firewall ipv4 name local-kubernetes description 'From LOCAL to KUBERNETES'
-set firewall ipv4 name local-kubernetes default-action 'accept'
-set firewall ipv4 name local-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name local-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name local-kubernetes rule 999 action 'accept'
-set firewall ipv4 name local-kubernetes rule 999 log
-
-# Containers -> KUBERNETES
-set firewall ipv4 name containers-kubernetes description 'From Container to KUBERNETES'
-set firewall ipv4 name containers-kubernetes default-action 'accept'
-set firewall ipv4 name containers-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name containers-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name containers-kubernetes rule 999 action 'accept'
-set firewall ipv4 name containers-kubernetes rule 999 log
-
-# NETWORK -> KUBERNETES
-set firewall ipv4 name network-kubernetes description 'From NETWORK to KUBERNETES'
-set firewall ipv4 name network-kubernetes default-action 'accept'
-set firewall ipv4 name network-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name network-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name network-kubernetes rule 999 action 'accept'
-set firewall ipv4 name network-kubernetes rule 999 log
-
-# SERVERS -> KUBERNETES
-set firewall ipv4 name servers-kubernetes description 'From KUBERNETES to KUBERNETES'
-set firewall ipv4 name servers-kubernetes default-action 'accept'
-set firewall ipv4 name servers-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name servers-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name servers-kubernetes rule 999 action 'accept'
-set firewall ipv4 name servers-kubernetes rule 999 log
-
-# IOT -> KUBERNETES
-set firewall ipv4 name iot-kubernetes description 'From IOT to KUBERNETES'
-set firewall ipv4 name iot-kubernetes default-action 'accept'
-set firewall ipv4 name iot-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name iot-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name iot-kubernetes rule 999 action 'accept'
-set firewall ipv4 name iot-kubernetes rule 999 log
-
-# TRUSTED -> KUBERNETES
-set firewall ipv4 name trusted-kubernetes description 'From TRUSTED to KUBERNETES'
-set firewall ipv4 name trusted-kubernetes default-action 'accept'
-set firewall ipv4 name trusted-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name trusted-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name trusted-kubernetes rule 999 action 'accept'
-set firewall ipv4 name trusted-kubernetes rule 999 log
-
-# WAN -> KUBERNETES
-set firewall ipv4 name wan-kubernetes description 'From WAN to KUBERNETES'
-set firewall ipv4 name wan-kubernetes default-action 'drop'
-set firewall ipv4 name wan-kubernetes default-log
-set firewall ipv4 name wan-kubernetes rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name wan-kubernetes rule 999 state 'invalid'
-set firewall ipv4 name wan-kubernetes rule 999 action 'accept'
-set firewall ipv4 name wan-kubernetes rule 999 log
 
 ### Zone TRUSTED ###
 
@@ -429,14 +330,6 @@ set firewall ipv4 name iot-trusted rule 999 description 'Rule: drop_invalid'
 set firewall ipv4 name iot-trusted rule 999 state 'invalid'
 set firewall ipv4 name iot-trusted rule 999 action 'accept'
 set firewall ipv4 name iot-trusted rule 999 log
-
-# KUBERNETES -> TRUSTED
-set firewall ipv4 name kubernetes-trusted description 'From KUBERNETES to TRUSTED'
-set firewall ipv4 name kubernetes-trusted default-action 'accept'
-set firewall ipv4 name kubernetes-trusted rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-trusted rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-trusted rule 999 action 'accept'
-set firewall ipv4 name kubernetes-trusted rule 999 log
 
 # WAN -> TRUSTED
 set firewall ipv4 name wan-trusted description 'From WAN to TRUSTED'
@@ -488,14 +381,6 @@ set firewall ipv4 name iot-wan rule 999 description 'Rule: drop_invalid'
 set firewall ipv4 name iot-wan rule 999 state 'invalid'
 set firewall ipv4 name iot-wan rule 999 action 'accept'
 set firewall ipv4 name iot-wan rule 999 log
-
-# KUBERNETES -> WAN
-set firewall ipv4 name kubernetes-wan description 'From KUBERNETES to WAN'
-set firewall ipv4 name kubernetes-wan default-action 'accept'
-set firewall ipv4 name kubernetes-wan rule 999 description 'Rule: drop_invalid'
-set firewall ipv4 name kubernetes-wan rule 999 state 'invalid'
-set firewall ipv4 name kubernetes-wan rule 999 action 'accept'
-set firewall ipv4 name kubernetes-wan rule 999 log
 
 # TRUSTED -> WAN
 set firewall ipv4 name trusted-wan description 'From TRUSTED to WAN'
