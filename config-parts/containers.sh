@@ -74,7 +74,7 @@ set container name lego-auto volume certs destination '/certs'
 set container name lego-auto volume certs mode 'rw'
 
 # HAProxy
-set container name haproxy image 'docker.io/library/haproxy:2.9.3'
+set container name haproxy image 'docker.io/library/haproxy:2.9.4'
 set container name haproxy memory '0'
 set container name haproxy network services address '10.5.0.4'
 set container name haproxy restart 'on-failure'
