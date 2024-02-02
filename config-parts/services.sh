@@ -21,7 +21,7 @@ set service mdns repeater interface br0.5
 set service lldp interface all
 
 # DDNS
-set service dns dynamic name cloudflare address 'pppoe0'
+set service dns dynamic name cloudflare address interface 'pppoe0'
 set service dns dynamic name cloudflare protocol 'cloudflare'
 set service dns dynamic name cloudflare host-name 'external.movishell.pl'
 set service dns dynamic name cloudflare username 'token'
