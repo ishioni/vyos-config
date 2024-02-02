@@ -25,10 +25,8 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 range 0 s
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 subnet-parameters 'option ubnt.unifi-controller 10.5.0.10;'
 
 # NETWORK static mappings
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping bigswitch ip-address '10.1.1.10'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping bigswitch mac-address '24:5a:4c:a5:f6:e2'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping fastswitch ip-address '10.1.1.11'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping fastswitch mac-address 'ac:8b:a9:a2:bf:d4'
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping eswitch ip-address '10.1.1.10'
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping eswitch mac-address 'f4:e2:c6:dd:aa:b9'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping downap ip-address '10.1.1.20'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping downap mac-address '78:45:58:b6:2f:f5'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping midap ip-address '10.1.1.21'
