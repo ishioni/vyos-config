@@ -57,7 +57,7 @@ set container name unifi volume logs mode 'rw'
 set container name unifi cap-add 'net-bind-service'
 
 # wildcard certificate
-set container name lego-auto image 'ghcr.io/bjw-s/lego-auto:v0.2.0'
+set container name lego-auto image 'ghcr.io/bjw-s/lego-auto:v0.3.0'
 set container name lego-auto memory '0'
 set container name lego-auto allow-host-networks
 set container name lego-auto shared-memory '0'
