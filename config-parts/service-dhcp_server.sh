@@ -95,7 +95,8 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-kids static-mapping-parameters 'ddns-hostname camera-kids;'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-bedroom mac-address '04:17:b6:1c:3c:a3'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping camera-bedroom static-mapping-parameters 'ddns-hostname camera-bedroom;'
-set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc mac-address '78:11:dc:82:bd:1f'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc ip-address '10.1.3.10'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc mac-address '5c:c5:63:ea:b4:59'
 
 # TRUSTED
 set service dhcp-server shared-network-name TRUSTED authoritative
