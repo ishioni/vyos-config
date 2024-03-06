@@ -31,7 +31,7 @@ $ORIGIN in-addr.arpa.
 ; IOT
 2.3.1.10                    IN  PTR  quadrant.ishioni.casa.
 ;4.3.1.10                    IN  PTR  rx-v679.ishioni.casa.
-;10.3.1.10                   IN  PTR  thesucc.ishioni.casa.
+10.3.1.10                   IN  PTR  thesucc.ishioni.casa.
 16.3.1.10                   IN  PTR  camera-kids.ishioni.casa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
 
