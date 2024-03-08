@@ -30,11 +30,11 @@ set nat destination rule 101 translation port '443'
 
 # TORRENT
 set nat destination rule 102 description 'uTP'
-set nat destination rule 102 destination port '51413'
+set nat destination rule 102 destination port '50413'
 set nat destination rule 102 inbound-interface name 'pppoe0'
 set nat destination rule 102 protocol 'tcp'
-set nat destination rule 102 translation address '10.84.2.4'
-set nat destination rule 102 translation port '51413'
+set nat destination rule 102 translation address '10.84.2.6'
+set nat destination rule 102 translation port '50413'
 
 # MINECRAFT
 set nat destination rule 103 description 'Minecraft'
