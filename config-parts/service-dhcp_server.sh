@@ -98,6 +98,16 @@ set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mappin
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc ip-address '10.1.3.10'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc mac-address '5c:c5:63:ea:b4:59'
 set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping thesucc static-mapping-parameters 'ddns-hostname thesucc;'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping serverplug mac-address '80:64:6f:d6:96:3c'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping serverplug static-mapping-parameters 'ddns-hostname serverplug;'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping dishwasherplug mac-address 'd4:8a:fc:46:c0:9c'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping dishwasherplug static-mapping-parameters 'ddns-hostname dishwasherplug;'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping dryerplug mac-address 'c8:2e:18:08:85:b4'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping dryerplug static-mapping-parameters 'ddns-hostname dryerplug;'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping fridgeplug mac-address 'e4:65:b8:b0:a8:cc'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping fridgeplug static-mapping-parameters 'ddns-hostname fridgeplug;'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping powermeter mac-address 'd8:bf:c0:1a:7c:6b'
+set service dhcp-server shared-network-name IOT subnet 10.1.3.0/24 static-mapping powermeter static-mapping-parameters 'ddns-hostname powermeter;'
 
 # TRUSTED
 set service dhcp-server shared-network-name TRUSTED authoritative
