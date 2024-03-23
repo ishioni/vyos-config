@@ -40,8 +40,8 @@ set interfaces pppoe pppoe1 source-interface 'eth0.35'
 set interfaces pppoe pppoe1 authentication user "${SECRET_ISP_AUTH_USER}/ipv6"
 set interfaces pppoe pppoe1 authentication password "${SECRET_ISP_AUTH_PASSWORD}"
 set interfaces pppoe pppoe1 ipv6 address 'autoconf'
-set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface eth5.5 address '1'
-set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface eth5.5 sla-id '0'
+set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface eth6.5 address '1'
+set interfaces pppoe pppoe1 dhcpv6-options pd 0 interface eth6.5 sla-id '0'
 set interfaces pppoe pppoe1 dhcpv6-options pd 0 length '56'
 set interfaces pppoe pppoe1 mtu '1500'
 set interfaces pppoe pppoe1 mru '1500'
@@ -49,13 +49,13 @@ set interfaces pppoe pppoe1 'no-default-route'
 set interfaces pppoe pppoe1 'disable' #Broken!
 
 # LAN
-set interfaces ethernet eth5 address '10.1.1.1/24'
-set interfaces ethernet eth5 vif 2 address '10.1.2.1/24'
-set interfaces ethernet eth5 vif 2 description 'SERVERS'
-set interfaces ethernet eth5 vif 3 address '10.1.3.1/24'
-set interfaces ethernet eth5 vif 3 description 'IOT'
-set interfaces ethernet eth5 vif 5 address '10.1.5.1/24'
-set interfaces ethernet eth5 vif 5 description 'TRUSTED'
+set interfaces ethernet eth6 address '10.1.1.1/24'
+set interfaces ethernet eth6 vif 2 address '10.1.2.1/24'
+set interfaces ethernet eth6 vif 2 description 'SERVERS'
+set interfaces ethernet eth6 vif 3 address '10.1.3.1/24'
+set interfaces ethernet eth6 vif 3 description 'IOT'
+set interfaces ethernet eth6 vif 5 address '10.1.5.1/24'
+set interfaces ethernet eth6 vif 5 description 'TRUSTED'
 
 # Wireguard
 set interfaces wireguard wg0 address '10.254.254.1/24'
