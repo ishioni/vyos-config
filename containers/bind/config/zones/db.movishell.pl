@@ -5,7 +5,7 @@
 $TTL 3600
 $ORIGIN movishell.pl.
 @ 3600 IN SOA movishell.pl. gateway.ishioni.casa. (
-  1690965199         ; serial number (epoch timestamp)
+  1690965299         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
