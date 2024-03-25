@@ -1,5 +1,13 @@
 #!/bin/vbash
 
+# LAN -> Unifi port redirect
+set nat source rule 98 description 'Unifi 443->8443'
+set nat source rule 98 destination address '10.5.0.10'
+set nat source rule 98 destination '443'
+set nat source rule 98 protocol tcp
+set nat source rule 98 source address '10.1.5.0/24'
+set nat source rule 98 translation port '8443'
+
 # LAN -> Leox masquarade
 set nat source rule 99 description 'LAN -> Leox'
 set nat source rule 99 destination address '192.168.100.0/24'
