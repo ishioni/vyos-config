@@ -5,7 +5,7 @@
 $TTL 3600
 $ORIGIN 10.in-addr.arpa.
 @ 3600 IN SOA 10.in-addr.arpa. gateway.ishioni.casa. (
-  1690965199         ; serial number (epoch timestamp)
+  1690965299         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
@@ -44,7 +44,6 @@ $ORIGIN in-addr.arpa.
 4.0.5.10                    IN  PTR  proxmox.ishioni.casa.
 4.0.5.10                    IN  PTR  meshcentral.ishioni.casa.
 4.0.5.10                    IN  PTR  talos.ishioni.casa.
-4.0.5.10                    IN  PTR  ui.ishioni.casa.
 5.0.5.10                    IN  PTR  opconnect.ishioni.casa.
 10.0.5.10                   IN  PTR  unifi.ishioni.casa.
 
