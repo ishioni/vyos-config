@@ -1,5 +1,13 @@
 #!/bin/vbash
 
+# SERVERS -> Unifi port redirect
+set nat destination rule 98 description 'Unifi 443->8443'
+set nat destination rule 98 destination address '10.5.0.10'
+set nat destination rule 98 destination port '443'
+set nat destination rule 98 protocol 'tcp'
+set nat destination rule 98 source address '10.1.2.0/24'
+set nat destination rule 98 translation port '8443'
+
 # LAN -> Unifi port redirect
 set nat destination rule 98 description 'Unifi 443->8443'
 set nat destination rule 98 destination address '10.5.0.10'
