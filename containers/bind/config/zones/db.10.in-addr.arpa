@@ -29,14 +29,12 @@ $ORIGIN in-addr.arpa.
 6.2.1.10                    IN  PTR  proxmox-4.ishioni.casa.
 
 ; IOT
-2.3.1.10                    IN  PTR  quadrant.ishioni.casa.
 ;4.3.1.10                    IN  PTR  rx-v679.ishioni.casa.
 10.3.1.10                   IN  PTR  thesucc.ishioni.casa.
 16.3.1.10                   IN  PTR  camera-kids.ishioni.casa.
 17.3.1.10                   IN  PTR  camera-bedroom.ishioni.casa.
 
 ; TRUSTED
-2.5.1.10                    IN  PTR  quadrant.ishioni.casa.
 ;3.5.1.10                    IN  PTR  coreelec.ishioni.casa.
 
 ; CONTAINERS
