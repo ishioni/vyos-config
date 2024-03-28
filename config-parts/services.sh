@@ -14,6 +14,7 @@ set service ssh disable-password-authentication
 set service ssh port '22'
 
 # mDNS server
+set service mdns repeater interface eth6.2
 set service mdns repeater interface eth6.3
 set service mdns repeater interface eth6.5
 
