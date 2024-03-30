@@ -1,9 +1,9 @@
 # #!/bin/vbash
 
 #!/bin/vbash
-set -x
+
 # ### Zone local ###
-create-firewall-rule local
+create-firewall-rules local
   to-vlan containers accept
   to-vlan network accept
   to-vlan servers accept
@@ -11,10 +11,8 @@ create-firewall-rule local
   to-vlan trusted accept
   to-vlan wan accept
 
-set +x
-
 # ### Zone Containers ###
-create-firewall-rule containers
+create-firewall-rules containers
   interfaces pod-services
   to-vlan local accept
   to-vlan network accept
@@ -25,7 +23,7 @@ create-firewall-rule containers
 
 
 # ### Zone Network ###
-create-firewall-rule network
+create-firewall-rules network
   interfaces eth6
   to-vlan local accept
   to-vlan containers accept
@@ -36,7 +34,7 @@ create-firewall-rule network
 
 
 # ### Zone Servers ###
-create-firewall-rule servers
+create-firewall-rules servers
   interfaces eth6.2
   to-vlan local accept
   to-vlan containers accept
@@ -46,7 +44,7 @@ create-firewall-rule servers
   to-vlan wan accept
 
 # ### Zone IoT ###
-create-firewall-rule iot
+create-firewall-rules iot
   interfaces eth6.3
   to-vlan local accept
   to-vlan containers accept
@@ -57,7 +55,7 @@ create-firewall-rule iot
 
 
 # ### Zone Trusted ###
-create-firewall-rule trusted
+create-firewall-rules trusted
   interfaces eth6.5 wg0
   to-vlan local accept
   to-vlan containers accept
@@ -68,7 +66,7 @@ create-firewall-rule trusted
 
 
 # ### Zone WAN ###
-create-firewall-rule wan
+create-firewall-rules wan
   interfaces pppoe0
   to-vlan local drop-log
   to-vlan containers drop-log
