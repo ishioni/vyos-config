@@ -20,6 +20,7 @@ function to-vlan {
   ZONE=${CURRENT_VLAN}-${TARGET_VLAN}
 
   set firewall zone ${TARGET_VLAN} from ${CURRENT_VLAN} firewall name ${ZONE}
+  set firewall ipv4 name ${ZONE} description "From ${CURRENT_VLAN} to ${TARGET_VLAN}"
   drop-traffic-invalid ${ZONE}
 
   case $2 in
