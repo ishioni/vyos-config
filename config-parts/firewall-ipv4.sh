@@ -67,6 +67,7 @@ create-firewall-rules trusted
 create-firewall-rules wan
   interfaces pppoe0
   to-vlan local drop-log
+    allow-traffic wireguard
   to-vlan containers drop-log
   to-vlan network drop-log
   to-vlan servers drop-log

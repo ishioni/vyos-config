@@ -119,9 +119,9 @@ function allow-traffic-dns {
 function allow-traffic-wireguard {
   zone=$1
 
-  # set firewall ipv4 name $zone rule 180 description 'Rule: accept wireguard'
+  set firewall ipv4 name $zone rule 180 description 'Rule: accept wireguard'
   set firewall ipv4 name $zone rule 180 action 'accept'
-  set firewall ipv4 name $zone rule 180 destination port '51820'
+  set firewall ipv4 name $zone rule 180 destination group port-group 'wireguard'
   set firewall ipv4 name $zone rule 180 protocol 'udp'
 }
 
