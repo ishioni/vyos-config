@@ -130,7 +130,7 @@ function allow-traffic-wireguard {
 function allow-traffic-http {
   zone=$1
 
-  set firewall ipv4 name $zone rule 200 description 'Rule: accept HTTP'
+  set firewall ipv4 name $zone rule 200 description 'Rule: accept http'
   set firewall ipv4 name $zone rule 200 action 'accept'
   set firewall ipv4 name $zone rule 200 destination port 'http'
   set firewall ipv4 name $zone rule 200 protocol 'tcp'
@@ -139,9 +139,18 @@ function allow-traffic-http {
 function allow-traffic-https {
   zone=$1
 
-  set firewall ipv4 name $zone rule 210 description 'Rule: accept HTTPS'
+  set firewall ipv4 name $zone rule 210 description 'Rule: accept https'
   set firewall ipv4 name $zone rule 210 action 'accept'
   set firewall ipv4 name $zone rule 210 destination port 'https'
+  set firewall ipv4 name $zone rule 210 protocol 'tcp'
+}
+
+function allow-traffic-torrent {
+  zone=$1
+
+  set firewall ipv4 name $zone rule 210 description 'Rule: accept torrent'
+  set firewall ipv4 name $zone rule 210 action 'accept'
+  set firewall ipv4 name $zone rule 210 destination group port-group 'torrent'
   set firewall ipv4 name $zone rule 210 protocol 'tcp'
 }
 

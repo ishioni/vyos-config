@@ -13,3 +13,4 @@ set firewall group address-group router-addresses address 127.0.0.1
 
 # Port groups
 set firewall group port-group wireguard port '51820'
+set firewall group port-group torrent port '25565'
