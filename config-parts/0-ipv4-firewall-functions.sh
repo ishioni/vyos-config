@@ -148,10 +148,10 @@ function allow-traffic-https {
 function allow-traffic-torrent {
   zone=$1
 
-  set firewall ipv4 name $zone rule 210 description 'Rule: accept torrent'
-  set firewall ipv4 name $zone rule 210 action 'accept'
-  set firewall ipv4 name $zone rule 210 destination group port-group 'torrent'
-  set firewall ipv4 name $zone rule 210 protocol 'tcp'
+  set firewall ipv4 name $zone rule 220 description 'Rule: accept torrent'
+  set firewall ipv4 name $zone rule 220 action 'accept'
+  set firewall ipv4 name $zone rule 220 destination group port-group 'torrent'
+  set firewall ipv4 name $zone rule 220 protocol 'tcp'
 }
 
 function allow-traffic-iperf {
