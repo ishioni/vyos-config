@@ -1,5 +1,3 @@
-# #!/bin/vbash
-
 #!/bin/vbash
 
 # ### Zone local ###
