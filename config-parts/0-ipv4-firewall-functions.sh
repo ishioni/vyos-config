@@ -3,7 +3,7 @@
 
 function create-firewall-rules {
   CURRENT_VLAN=$1
-  set firewall zone description "${CURRENT_VLAN}"
+  set firewall zone ${CURRENT_VLAN} description "${CURRENT_VLAN}"
   set firewall zone ${CURRENT_VLAN} default-action 'drop'
   if test "${CURRENT_VLAN}" == "local"; then
     set firewall zone ${CURRENT_VLAN} local-zone
