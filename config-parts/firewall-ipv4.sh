@@ -1,7 +1,7 @@
 # #!/bin/vbash
 
 #!/bin/vbash
-
+set -x
 # ### Zone local ###
 create-firewall-rule local
   to-vlan containers accept
@@ -10,6 +10,8 @@ create-firewall-rule local
   to-vlan iot accept
   to-vlan trusted accept
   to-vlan wan accept
+
+set +x
 
 # ### Zone Containers ###
 create-firewall-rule containers
