@@ -32,7 +32,7 @@ set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-ma
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping midap ip-address '10.1.1.21'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping midap mac-address '78:45:58:b3:89:0b'
 set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping upap ip-address '10.1.1.22'
-set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping upap mac-address 'b4:fb:e4:87:05:68'
+set service dhcp-server shared-network-name NETWORK subnet 10.1.1.0/24 static-mapping upap mac-address 'f4:e2:c6:e9:8f:29'
 
 # SERVERS
 set service dhcp-server shared-network-name SERVERS authoritative
