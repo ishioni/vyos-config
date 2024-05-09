@@ -52,6 +52,8 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 range 0 s
 
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell ip-address '10.1.2.66'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping shell mac-address 'be:32:83:a0:de:8b'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping quadrant ip-address '10.1.2.2'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping quadrant mac-address '7c:fe:90:9c:bb:60'
 
 # Talos
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping talos-master-0 ip-address '10.1.2.30'
