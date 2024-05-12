@@ -182,5 +182,5 @@ function drop-traffic-invalid {
   set firewall ipv4 name $zone rule 999 description 'Rule: drop_invalid'
   set firewall ipv4 name $zone rule 999 action 'drop'
   set firewall ipv4 name $zone rule 999 state invalid
-  set firewall ipv4 name $zone rule 999 log
+  # set firewall ipv4 name $zone rule 999 log
 }
