@@ -66,14 +66,14 @@ create-firewall-rules trusted
 # ### Zone WAN ###
 create-firewall-rules wan
   interfaces pppoe0
-  to-vlan local drop-log
+  to-vlan local drop
     allow-traffic wireguard icmp
-  to-vlan containers drop-log
-  to-vlan network drop-log
-  to-vlan servers drop-log
+  to-vlan containers drop
+  to-vlan network drop
+  to-vlan servers drop
     allow-traffic ssh http https torrent
-  to-vlan iot drop-log
-  to-vlan trusted drop-log
+  to-vlan iot drop
+  to-vlan trusted drop
 
 
 
