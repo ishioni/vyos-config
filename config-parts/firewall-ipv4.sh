@@ -71,7 +71,7 @@ create-firewall-rules wan
   to-vlan containers drop-log
   to-vlan network drop-log
   to-vlan servers drop-log
-    allow-traffic http https torrent
+    allow-traffic ssh http https torrent
   to-vlan iot drop-log
   to-vlan trusted drop-log
 

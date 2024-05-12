@@ -105,6 +105,7 @@ function allow-traffic-ssh {
 
   set firewall ipv4 name $zone rule 160 description 'Rule: accept ssh'
   set firewall ipv4 name $zone rule 160 action 'accept'
+  set firewall ipv4 name $zone rule 160 address "10.1.2.66"
   set firewall ipv4 name $zone rule 160 destination port 'ssh'
   set firewall ipv4 name $zone rule 160 protocol 'tcp'
 }
@@ -132,6 +133,7 @@ function allow-traffic-http {
 
   set firewall ipv4 name $zone rule 200 description 'Rule: accept http'
   set firewall ipv4 name $zone rule 200 action 'accept'
+  set firewall ipv4 name $zone rule 200 address "10.84.2.2"
   set firewall ipv4 name $zone rule 200 destination port 'http'
   set firewall ipv4 name $zone rule 200 protocol 'tcp'
 }
@@ -141,6 +143,7 @@ function allow-traffic-https {
 
   set firewall ipv4 name $zone rule 210 description 'Rule: accept https'
   set firewall ipv4 name $zone rule 210 action 'accept'
+  set firewall ipv4 name $zone rule 210 address "10.84.2.2"
   set firewall ipv4 name $zone rule 210 destination port 'https'
   set firewall ipv4 name $zone rule 210 protocol 'tcp'
 }
@@ -150,6 +153,7 @@ function allow-traffic-torrent {
 
   set firewall ipv4 name $zone rule 220 description 'Rule: accept torrent'
   set firewall ipv4 name $zone rule 220 action 'accept'
+  set firewall ipv4 name $zone rule 220 address "10.84.2.4"
   set firewall ipv4 name $zone rule 220 destination group port-group 'torrent'
   set firewall ipv4 name $zone rule 220 protocol 'tcp'
 }
