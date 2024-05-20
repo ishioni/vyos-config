@@ -1,4 +1,11 @@
 #!/bin/vbash
+# Wireguard -> Unifi port redirect
+set nat destination rule 96 description 'Unifi 443->8443'
+set nat destination rule 96 destination address '10.5.0.10'
+set nat destination rule 96 destination port '443'
+set nat destination rule 96 protocol 'tcp'
+set nat destination rule 96 source address '10.254.254.0/24'
+set nat destination rule 96 translation port '8443'
 
 # SERVERS -> Unifi port redirect
 set nat destination rule 97 description 'Unifi 443->8443'
