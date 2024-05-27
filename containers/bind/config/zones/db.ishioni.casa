@@ -5,7 +5,7 @@
 $TTL 3600
 $ORIGIN ishioni.casa.
 @ 3600 IN SOA ishioni.casa. gateway.ishioni.casa. (
-  1715250804         ; serial number (epoch timestamp)
+  1716814191         ; serial number (epoch timestamp)
   7200               ; refresh period
   3600               ; retry period
   1209600            ; expire time
@@ -37,8 +37,6 @@ proxmox-4                     IN  A  10.1.2.6
 ; Containers
 talos                         IN  A  10.5.0.4
 proxmox                       IN  A  10.5.0.4
-meshcentral                   IN  A  10.5.0.4
-opconnect                     IN  A  10.5.0.5
 unifi                          IN  A  10.5.0.10
 
 ; CNAME records
