@@ -19,7 +19,7 @@ $ORIGIN ishioni.casa.
 gateway                       IN  A  10.1.1.1
 
 ; SERVERS
-;quadrant                      IN  A  10.1.2.2
+quadrant                      IN  A  10.1.2.2
 proxmox-1                     IN  A  10.1.2.3
 proxmox-2                     IN  A  10.1.2.4
 proxmox-3                     IN  A  10.1.2.5
