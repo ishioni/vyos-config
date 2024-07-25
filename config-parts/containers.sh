@@ -20,7 +20,7 @@ set container name dnsdist volume config mode 'ro'
 
 # bind
 set container name bind cap-add 'net-bind-service'
-set container name bind image 'docker.io/internetsystemsconsortium/bind9:9.18'
+set container name bind image 'docker.io/internetsystemsconsortium/bind9:9.20'
 set container name bind command '/usr/sbin/named -4 -f -c /etc/bind/named.conf -u bind'
 set container name bind memory '0'
 set container name bind network services address '10.5.0.2'
