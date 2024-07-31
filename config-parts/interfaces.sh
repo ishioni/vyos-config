@@ -56,6 +56,8 @@ set interfaces ethernet eth6 vif 3 address '10.1.3.1/24'
 set interfaces ethernet eth6 vif 3 description 'IOT'
 set interfaces ethernet eth6 vif 5 address '10.1.5.1/24'
 set interfaces ethernet eth6 vif 5 description 'TRUSTED'
+set interfaces ethernet eth6 vif 55 address '10.1.55.1/24'
+set interfaces ethernet eth6 vif 55 description 'UCGLAN'
 
 # Wireguard
 set interfaces wireguard wg0 address '10.254.254.1/24'

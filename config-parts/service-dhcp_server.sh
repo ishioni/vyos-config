@@ -128,3 +128,17 @@ set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 range 0 s
 # LAN static mappings
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec ip-address '10.1.5.3'
 set service dhcp-server shared-network-name TRUSTED subnet 10.1.5.0/24 static-mapping coreelec mac-address '10:27:f5:09:42:81'
+
+# UCGLAN
+set service dhcp-server shared-network-name UCGLAN authoritative
+set service dhcp-server shared-network-name UCGLAN shared-network-parameters 'zone ishioni.casa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name UCGLAN shared-network-parameters 'zone 10.in-addr.arpa. { primary 10.5.0.2; key dhcpd; }'
+set service dhcp-server shared-network-name UCGLAN shared-network-parameters 'ddns-domainname &quot;ishioni.casa.&quot;;'
+set service dhcp-server shared-network-name UCGLAN shared-network-parameters 'ddns-rev-domainname &quot;in-addr.arpa.&quot;;'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 default-router '10.1.55.1'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 domain-name 'ishioni.casa'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 domain-search 'ishioni.casa'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 lease '86400'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 name-server '10.1.55.1'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 range 0 start '10.1.55.2'
+set service dhcp-server shared-network-name UCGLAN subnet 10.1.55.0/24 range 0 stop '10.1.55.31'

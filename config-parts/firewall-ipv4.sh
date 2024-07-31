@@ -7,6 +7,7 @@ create-firewall-rules local
   to-vlan servers accept
   to-vlan iot accept
   to-vlan trusted accept
+  to-vlan ucglan accept
   to-vlan wan accept
 
 # ### Zone Containers ###
@@ -17,6 +18,7 @@ create-firewall-rules containers
   to-vlan servers accept
   to-vlan iot accept
   to-vlan trusted accept
+  to-vlan ucglan accept
   to-vlan wan accept
 
 # ### Zone Network ###
@@ -27,6 +29,7 @@ create-firewall-rules network
   to-vlan servers accept
   to-vlan iot accept
   to-vlan trusted accept
+  to-vlan ucglan accept
   to-vlan wan accept
 
 # ### Zone Servers ###
@@ -37,6 +40,7 @@ create-firewall-rules servers
   to-vlan network accept
   to-vlan iot accept
   to-vlan trusted accept
+  to-vlan ucglan accept
   to-vlan wan accept
 
 # ### Zone IoT ###
@@ -47,6 +51,7 @@ create-firewall-rules iot
   to-vlan network accept
   to-vlan servers accept
   to-vlan trusted accept
+  to-vlan ucglan accept
   to-vlan wan accept
 
 # ### Zone Trusted ###
@@ -57,6 +62,17 @@ create-firewall-rules trusted
   to-vlan network accept
   to-vlan servers accept
   to-vlan iot accept
+  to-vlan ucglan accept
+  to-vlan wan accept
+
+create-firewall-rules ucglan
+  interfaces eth6.55
+  to-vlan local accept
+  to-vlan containers accept
+  to-vlan network accept
+  to-vlan servers accept
+  to-vlan iot accept
+  to-vlan trusted accept
   to-vlan wan accept
 
 # ### Zone WAN ###
@@ -70,3 +86,4 @@ create-firewall-rules wan
     allow-traffic ssh http https torrent
   to-vlan iot drop
   to-vlan trusted drop
+  to-vlan ucglan drop

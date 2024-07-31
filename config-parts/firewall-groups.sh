@@ -9,6 +9,7 @@ set firewall group address-group router-addresses address 10.1.1.1
 set firewall group address-group router-addresses address 10.1.2.1
 set firewall group address-group router-addresses address 10.1.3.1
 set firewall group address-group router-addresses address 10.1.5.1
+set firewall group address-group router-addresses address 10.1.55.1
 set firewall group address-group router-addresses address 127.0.0.1
 
 # Port groups
