@@ -35,6 +35,7 @@ proxmox-4                     IN  A  10.1.2.6
 ;coreelec                      IN  A  10.1.5.3
 
 ; Containers
+talos-test                    IN  A  10.1.2.10
 talos                         IN  A  10.5.0.4
 proxmox                       IN  A  10.5.0.4
 unifi                          IN  A  10.5.0.10
