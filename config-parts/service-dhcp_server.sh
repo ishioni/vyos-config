@@ -61,7 +61,7 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-ma
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-master-1 ip-address '10.1.2.12'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-master-1 mac-address 'BC:24:11:D2:DE:08'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-master-2 ip-address '10.1.2.13'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-master-2 mac-address 'BC:24:11:CA:1E:77'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-master-2 mac-address 'BC:24:11:81:FA:B3'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-worker-0 ip-address '10.1.2.14'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-worker-0 mac-address 'BC:24:11:F4:C6:2B'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping t-worker-1 ip-address '10.1.2.15'
