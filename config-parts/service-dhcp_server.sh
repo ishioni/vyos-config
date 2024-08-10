@@ -56,17 +56,17 @@ set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-ma
 # set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping quadrant mac-address 'f8:f2:1e:85:4b:b0'
 
 # Talos
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 ip-address '10.1.2.11'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 ip-address '10.1.2.33'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-0 mac-address 'bc:24:11:c4:1a:ac'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 ip-address '10.1.2.12'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 ip-address '10.1.2.34'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-1 mac-address 'bc:24:11:53:b5:3b'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 ip-address '10.1.2.13'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 ip-address '10.1.2.35'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping master-2 mac-address 'bc:24:11:ca:1e:77'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 ip-address '10.1.2.14'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 ip-address '10.1.2.36'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-0 mac-address 'bc:24:11:ba:e4:28'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 ip-address '10.1.2.15'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 ip-address '10.1.2.37'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-1 mac-address 'bc:24:11:25:9b:1f'
-set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 ip-address '10.1.2.16'
+set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 ip-address '10.1.2.38'
 set service dhcp-server shared-network-name SERVERS subnet 10.1.2.0/24 static-mapping worker-2 mac-address 'bc:24:11:23:42:56'
 
 # IOT
