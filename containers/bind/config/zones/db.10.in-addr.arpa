@@ -38,7 +38,7 @@ $ORIGIN in-addr.arpa.
 ;3.5.1.10                    IN  PTR  coreelec.ishioni.casa.
 
 ; CONTAINERS
-10.2.1.10                   IN  PTR  talos-test-api.ishioni.casa
+10.2.1.10                   IN  PTR  talostest-api.ishioni.casa
 3.0.5.10                    IN  PTR  talos.ishioni.casa.
 4.0.5.10                    IN  PTR  proxmox.ishioni.casa.
 4.0.5.10                    IN  PTR  talos.ishioni.casa.
