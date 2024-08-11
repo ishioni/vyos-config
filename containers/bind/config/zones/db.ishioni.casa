@@ -36,8 +36,6 @@ proxmox-4                     IN  A  10.1.2.6
 
 ; Containers
 talos-api                     IN  A  10.1.2.32
-talos                         IN  A  10.5.0.4
-proxmox                       IN  A  10.5.0.4
 unifi                          IN  A  10.5.0.10
 
 ; CNAME records

@@ -75,22 +75,6 @@ set container name lego-auto volume certs source '/config/certs'
 set container name lego-auto volume certs destination '/certs'
 set container name lego-auto volume certs mode 'rw'
 
-# HAProxy
-set container name haproxy image 'docker.io/library/haproxy:3.0.3'
-set container name haproxy memory '0'
-set container name haproxy network services address '10.5.0.4'
-set container name haproxy restart 'on-failure'
-set container name haproxy shared-memory '0'
-set container name haproxy uid '0'
-set container name haproxy gid '102'
-set container name haproxy cap-add 'net-bind-service'
-set container name haproxy volume config source '/config/containers/haproxy/config/haproxy.cfg'
-set container name haproxy volume config destination '/usr/local/etc/haproxy/haproxy.cfg'
-set container name haproxy volume config mode 'ro'
-set container name haproxy volume certs source '/config/certs'
-set container name haproxy volume certs destination '/etc/haproxy/certs'
-set container name haproxy volume certs mode 'ro'
-
 # node-exporter
 set container name node-exporter environment procfs value '/host/proc'
 set container name node-exporter environment rootfs value '/host/rootfs'
