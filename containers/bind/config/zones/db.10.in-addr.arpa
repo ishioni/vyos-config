@@ -27,6 +27,10 @@ $ORIGIN in-addr.arpa.
 4.2.1.10                    IN  PTR  proxmox-2.ishioni.casa.
 5.2.1.10                    IN  PTR  proxmox-3.ishioni.casa.
 6.2.1.10                    IN  PTR  proxmox-4.ishioni.casa.
+7.2.1.10                    IN  PTR  optiplex-1.ishioni.casa.
+8.2.1.10                    IN  PTR  optiplex-2.ishioni.casa.
+9.2.1.10                    IN  PTR  optiplex-3.ishioni.casa.
+10.2.1.10                   IN  PTR  optiplex-4.ishioni.casa.
 
 ; IOT
 ;4.3.1.10                    IN  PTR  rx-v679.ishioni.casa.

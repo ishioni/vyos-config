@@ -24,6 +24,10 @@ proxmox-1                     IN  A  10.1.2.3
 proxmox-2                     IN  A  10.1.2.4
 proxmox-3                     IN  A  10.1.2.5
 proxmox-4                     IN  A  10.1.2.6
+optiplex-1                    IN  A  10.1.2.7
+optiplex-2                    IN  A  10.1.2.8
+optiplex-3                    IN  A  10.1.2.9
+optiplex-4                    IN  A  10.1.2.10
 
 ; IOT
 ;rx-v679                       IN  A  10.1.3.4
