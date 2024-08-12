@@ -39,7 +39,6 @@ optiplex-4                    IN  A  10.1.2.10
 ;coreelec                      IN  A  10.1.5.3
 
 ; Containers
-talos-api                     IN  A  10.1.2.32
 unifi                          IN  A  10.5.0.10
 
 ; CNAME records

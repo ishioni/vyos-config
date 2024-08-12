@@ -42,5 +42,4 @@ $ORIGIN in-addr.arpa.
 ;3.5.1.10                    IN  PTR  coreelec.ishioni.casa.
 
 ; CONTAINERS
-32.2.1.10                   IN  PTR  talos-api.ishioni.casa
 10.0.5.10                   IN  PTR  unifi.ishioni.casa.
