@@ -122,7 +122,7 @@ function allow-traffic-http {
   zone=$1
   set firewall ipv4 name $zone rule 200 description 'Rule: accept http'
   set firewall ipv4 name $zone rule 200 action 'accept'
-  set firewall ipv4 name $zone rule 200 destination address "10.84.2.1"
+  set firewall ipv4 name $zone rule 200 destination address "10.1.2.96"
   set firewall ipv4 name $zone rule 200 destination port 'http'
   set firewall ipv4 name $zone rule 200 protocol 'tcp'
 }
@@ -131,7 +131,7 @@ function allow-traffic-https {
   zone=$1
   set firewall ipv4 name $zone rule 210 description 'Rule: accept https'
   set firewall ipv4 name $zone rule 210 action 'accept'
-  set firewall ipv4 name $zone rule 210 destination address "10.84.2.1"
+  set firewall ipv4 name $zone rule 210 destination address "10.1.2.96"
   set firewall ipv4 name $zone rule 210 destination port 'https'
   set firewall ipv4 name $zone rule 210 protocol 'tcp'
 }
@@ -140,7 +140,7 @@ function allow-traffic-torrent {
   zone=$1
   set firewall ipv4 name $zone rule 220 description 'Rule: accept torrent'
   set firewall ipv4 name $zone rule 220 action 'accept'
-  set firewall ipv4 name $zone rule 220 destination address "10.84.2.2"
+  set firewall ipv4 name $zone rule 220 destination address "10.1.2.97"
   set firewall ipv4 name $zone rule 220 destination group port-group 'torrent'
   set firewall ipv4 name $zone rule 220 protocol 'tcp'
 }
@@ -149,7 +149,7 @@ function allow-traffic-minecraft {
   zone=$1
   set firewall ipv4 name $zone rule 230 description 'Rule: accept minecraft'
   set firewall ipv4 name $zone rule 230 action 'accept'
-  set firewall ipv4 name $zone rule 230 destination address "10.84.2.3"
+  set firewall ipv4 name $zone rule 230 destination address "10.1.2.98"
   set firewall ipv4 name $zone rule 230 destination group port-group 'minecraft'
   set firewall ipv4 name $zone rule 230 protocol 'tcp'
 }
