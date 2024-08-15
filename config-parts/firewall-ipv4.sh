@@ -83,7 +83,7 @@ create-firewall-rules wan
   to-vlan containers drop
   to-vlan network drop
   to-vlan servers drop
-    allow-traffic ssh http https torrent
+    allow-traffic ssh http https torrent minecraft
   to-vlan iot drop
   to-vlan trusted drop
   to-vlan ucglan drop
