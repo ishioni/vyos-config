@@ -24,7 +24,14 @@ set service lldp interface all
 # DDNS
 set service dns dynamic name cloudflare address interface 'pppoe0'
 set service dns dynamic name cloudflare protocol 'cloudflare'
-set service dns dynamic name cloudflare host-name 'external.movishell.pl'
+set service dns dynamic name cloudflare host-name 'movishell.pl'
 set service dns dynamic name cloudflare username 'token'
 set service dns dynamic name cloudflare password "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
 set service dns dynamic name cloudflare zone 'movishell.pl'
+
+set service dns dynamic name cloudflare-external address interface 'pppoe0'
+set service dns dynamic name cloudflare-external protocol 'cloudflare'
+set service dns dynamic name cloudflare-external host-name 'external.movishell.pl'
+set service dns dynamic name cloudflare-external username 'token'
+set service dns dynamic name cloudflare-external password "${SECRET_CLOUDFLARE_DYNDNS_TOKEN}"
+set service dns dynamic name cloudflare-external zone 'movishell.pl'
