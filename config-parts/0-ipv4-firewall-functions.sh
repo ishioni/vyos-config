@@ -147,11 +147,11 @@ function allow-traffic-torrent {
 
 function allow-traffic-minecraft {
   zone=$1
-  set firewall ipv4 name $zone rule 220 description 'Rule: accept torrent'
-  set firewall ipv4 name $zone rule 220 action 'accept'
-  set firewall ipv4 name $zone rule 220 destination address "10.84.2.3"
-  set firewall ipv4 name $zone rule 220 destination group port-group 'minecraft'
-  set firewall ipv4 name $zone rule 220 protocol 'tcp'
+  set firewall ipv4 name $zone rule 230 description 'Rule: accept minecraft'
+  set firewall ipv4 name $zone rule 230 action 'accept'
+  set firewall ipv4 name $zone rule 230 destination address "10.84.2.3"
+  set firewall ipv4 name $zone rule 230 destination group port-group 'minecraft'
+  set firewall ipv4 name $zone rule 230 protocol 'tcp'
 }
 
 function allow-traffic-iperf {
