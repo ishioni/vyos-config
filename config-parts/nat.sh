@@ -40,7 +40,7 @@ set nat destination rule 100 description 'Public ingress - http'
 set nat destination rule 100 destination port '80'
 set nat destination rule 100 inbound-interface name 'pppoe0'
 set nat destination rule 100 protocol 'tcp'
-set nat destination rule 100 translation address '10.84.2.2'
+set nat destination rule 100 translation address '10.84.2.1'
 set nat destination rule 100 translation port '80'
 
 # HTTPS
@@ -48,7 +48,7 @@ set nat destination rule 101 description 'Public ingress - https'
 set nat destination rule 101 destination port '443'
 set nat destination rule 101 inbound-interface name 'pppoe0'
 set nat destination rule 101 protocol 'tcp'
-set nat destination rule 101 translation address '10.84.2.2'
+set nat destination rule 101 translation address '10.84.2.1'
 set nat destination rule 101 translation port '443'
 
 # TORRENT
@@ -56,7 +56,7 @@ set nat destination rule 102 description 'uTP'
 set nat destination rule 102 destination port '50413'
 set nat destination rule 102 inbound-interface name 'pppoe0'
 set nat destination rule 102 protocol 'tcp'
-set nat destination rule 102 translation address '10.84.2.6'
+set nat destination rule 102 translation address '10.84.2.2'
 set nat destination rule 102 translation port '50413'
 
 # MINECRAFT
@@ -64,16 +64,16 @@ set nat destination rule 103 description 'Minecraft'
 set nat destination rule 103 destination port '25565'
 set nat destination rule 103 inbound-interface name 'pppoe0'
 set nat destination rule 103 protocol 'tcp'
-set nat destination rule 103 translation address '10.84.2.5'
+set nat destination rule 103 translation address '10.84.2.3'
 set nat destination rule 103 translation port '25565'
 
-# JUMPHOST
-set nat destination rule 104 description 'Jumphost'
-set nat destination rule 104 destination port '22'
-set nat destination rule 104 inbound-interface name 'pppoe0'
-set nat destination rule 104 protocol 'tcp'
-set nat destination rule 104 translation address '10.1.2.66'
-set nat destination rule 104 translation port '22'
+# # JUMPHOST
+# set nat destination rule 104 description 'Jumphost'
+# set nat destination rule 104 destination port '22'
+# set nat destination rule 104 inbound-interface name 'pppoe0'
+# set nat destination rule 104 protocol 'tcp'
+# set nat destination rule 104 translation address '10.1.2.66'
+# set nat destination rule 104 translation port '22'
 
 # Force NTP
 # set nat destination rule 200 description 'Force NTP for NETWORK'
